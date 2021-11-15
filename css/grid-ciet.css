@@ -1,0 +1,247 @@
+.contenedor {
+    display: grid;
+grid-gap: 10px;
+	padding: 10px 5%;
+	width: 100%;
+    height: auto;
+	margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+    align-items: center;
+	text-align: center;
+	text-decoration: wavy;
+    overflow:auto;
+    
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+}
+.contenedor div{
+    padding: 1px ;
+    
+    margin-left: auto;
+    margin-right: auto;
+    outline-offset: 5px;
+border: 2px solid #5878ca;
+
+border-radius: 40%;
+box-shadow: 3px 3px 3px 3px gray;
+background: linear-gradient(-100deg, #e4fccf, #fdf399, rgb(248, 217, 217),rgb(225, 253, 225)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: 400% 300%;
+animation: BgGradient 10s ease infinite;
+}
+.contenedor p{
+    padding: 8%;
+    text-decoration: none;
+    color: black;
+    width: 200px;
+    height: auto;
+    text-align:center;
+    align-content: center;
+    font-size: 1em;
+    margin: auto;
+   
+    
+} 
+.contenedor a{
+    text-decoration: none;
+    color: black; 
+font-size: 1em; 
+
+text-align: center; 
+margin: 0 auto; 
+
+padding: 2px; 
+
+
+}
+.contenedor .d1:hover{
+    transform: rotateY(720deg);
+    transition: 9000ms;
+}
+.contenedor .d2:hover{
+    transform: rotateY(-720deg);
+    transition: 9000ms;
+    }
+
+    .contenedor .d3:hover{
+        transform: rotateY(720deg);
+        transition: 9000ms;
+        }
+.grid{
+    padding-top: 50px;
+	width: 80%;
+    height: auto;
+	align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(1,minmax(200px,1fr));
+display: grid;
+grid-gap: 40px;
+background-color:white;
+}
+
+
+.grid img{
+    width: 80%;
+    height: auto;
+    
+}
+.grid #logo{
+    width: 30%;
+    height: auto;
+   margin-left: auto;
+   margin-right: auto;
+
+    
+}
+.grid p{
+    margin: 0 20%;
+    text-align: justify;
+}
+
+h1,h2{
+		
+    padding-top: 3rem;
+    font-size: 22px;
+line-height: 30px;
+letter-spacing: 1px;
+font-weight: 600;
+color: #011b19;
+border-bottom: 2px solid #01897e6e;
+padding-bottom: 10px;
+background-color: var(--bg);
+text-align: center;
+box-shadow: 1x gray;
+
+}
+p{
+background-color: var(--bg);
+line-height: 30px;
+
+}
+
+.texto{
+	padding-top:80px;
+    width: 75%;
+    max-width: auto;
+    margin-left: auto;
+	margin-right: auto;
+	font-size: large;
+    text-align: justify;
+	border-bottom: 2px solid #01897e6e;
+    
+}
+
+.grid3{
+    padding-top: 80px;
+	width: 80%;
+    height: auto;
+	
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: justify;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+display: grid;
+grid-gap: 40px;
+
+background-color:white;
+}
+.grid3 img{
+    width: 85%;
+    height: 95%;
+    box-shadow: 5px 5px 5px gray;
+}
+#ti{
+    color: rgb(247, 162, 4);   
+}
+.grid4 h4{
+    color: rgb(247, 162, 4);   
+}
+.grid3 p{
+    padding: 10%;
+    color: white;
+    background-color: rgb(247, 162, 4);
+    width: 85%;
+    height: 95%;
+    text-align: justify;
+    align-content: center;
+    font-size: 1.5rem;
+    margin: auto;
+    box-shadow: 5px 5px 5px gray;
+}
+
+#tx2 p{
+    background-color: rgb(250, 99, 99);
+}
+#tx3 p{
+    background-color: rgb(107, 179, 247);
+}
+.grid img:hover{
+    transform: none;
+}
+
+.grid4{
+    padding: auto;
+	width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(1,minmax(100px,1fr));
+display: grid;
+grid-gap: 10px;
+
+background-color:white;
+}
+.grid4 p{
+    margin: 0 10%;
+    text-align: justify;
+}
+@media screen and (max-width: 800px) {
+    .grid{
+        padding-top: 40px;
+    }
+    .grid p{
+        margin: 0 8%;
+        text-align: justify;
+    }
+    .grid4{
+        padding: auto;
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        align-content:space-around;
+        text-align: center;
+        overflow:auto;
+        text-decoration: wavy;
+        grid-template-columns: repeat(1,minmax(60px,1fr));
+    display: grid;
+    grid-gap: 10px;
+    
+    background-color:white;
+}
+
+.grid4 p {
+margin: 0 10%;
+text-align: justify;
+}
+.grid4 img{
+    width: 85%;
+    height: auto;
+    
+}
+
+
+}

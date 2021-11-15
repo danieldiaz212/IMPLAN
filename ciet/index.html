@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="iso-8859-1">
+<title>Modelo inform�tico</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="icon" href="../css/img/implan.jpg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../css/img/implan.jpg" type="image/x-icon"/>
+    <link rel="stylesheet" href="../ciet/css/plantilla.css">
+    <link rel="stylesheet" href="../ciet/css/grid-ciet.css">
+	<script src="http:/code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="../css/animate.css"/>
+        <script src="../js/wow.min.js"></script>
+        <script>
+            new WOW().init(); 
+        </script>
+	<script src="../js/main.js"></script>
+    <script src="../js/cerrar.js"></script>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/progressbar.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome-4.7.0./css/font-awesome.css" rel="stylesheet" type="text/css">
+
+<!--<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script> -->
+<script src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/tabs.js"></script>
+
+<script src="js/zingchart.min.js"></script>
+<script>
+	zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+	ZC.LICENSE = [ "569d52cefae586f634c54f86dc99e6a9",
+			"ee6b7db5b51705a13dc2339db3edaf6d" ];
+</script>
+
+<script type="text/javascript" src="js/funciones.js"></script>
+<script type="text/javascript" src="js/estructura_CPI.js"></script>
+<script type="text/javascript" src="js/ecuaciones.js"></script>
+<script type="text/javascript" src="js/ecuaciones2.js"></script>
+<script type="text/javascript" src="js/ecuaciones_sum.js"></script>
+<script type="text/javascript" src="js/ecuaciones_vph.js"></script>
+<script type="text/javascript" src="js/ecuaciones_itm.js"></script>
+<script type="text/javascript" src="js/ecuaciones_pobla_may_15.js"></script>
+<script type="text/javascript" src="js/estructura_sim.js"></script>
+<script type="text/javascript" src="js/resolver.js"></script>
+<!--script type="text/javascript" src="js/ayuda.js"></script-->
+<script type="text/javascript" src="js/definiciones.js"></script>
+<script type="text/javascript" src="js/progressbar.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!--<script>
+$(document).ready(function(){
+    $("#actua").click(function(){
+        $("#espere").toggle();
+        });
+    });
+});
+</script>-->
+
+
+</head>
+
+<body onLoad="iniciarr()">
+
+  
+
+<div id="pagewrap">
+
+		<div id="header">
+			<div id="titulo">
+				<center><h3 style="font-family: Calibri;">Modelo inform�tico para el c�lculo de indicadores de Prosperidad en el municipio de Quer�taro</h3></center>
+              
+				<center><div id="valor_CPI"></div></center>
+			</div>
+			<div class="responsive">
+				<div class="img">
+					<a target="_blank" href="imagenes/oficina.jpg"> <img
+						src="imagenes/oficina.jpg" alt="Trolltunga Norway" width="250"
+						height="150">
+					</a>
+					<div class="desc"></div>
+				</div>
+
+			</div>
+
+		</div>
+   
+   
+   
+
+
+<!-- <input type="checkbox" id="cerrar">
+<label for="cerrar" id="btn-cerrar">X</label> -->  
+<div id="bgventana" class="bgventana_hid">
+<div id="ventana">
+
+
+<div id="tit" class="titulo_def">
+</div>
+ <div id="definicion">
+ Poner aqui la definici�n
+ </div>
+
+ <span onmousedown="desplegar('hidden')" class="close_def">&times;</span>
+
+
+
+</div>
+</div>  
+
+
+<div id="bgventana2">
+<div id="ventana">
+
+
+<div id="fuen" class="titulo_def">
+</div>
+ <div id="anio_f">
+poner anio
+ </div>
+  <div id="val_hist">
+poner valor historico
+ </div>
+  <div id="anio_hist">
+poner anio historico
+ </div>
+  <div id="tasa_cre">
+poner tcma
+ </div>
+
+ <span onmousedown="desplegar_tabla('hidden')" class="close_def">&times;</span>
+
+
+
+</div>
+</div> 
+
+<main>
+
+  <input id="tab8" type="radio" name="tabs" class="tab" checked>
+  <label id="lbl8" for="tab8">Inicio</label>
+
+   <input id="tab7" type="radio" name="tabs" class="tab">
+  <label id="lbl7" for="tab7">Variables:</label>
+  
+  
+  <input id="tab1" type="radio" name="tabs" class="tab">
+  <label id="lbl1" for="tab1">Productividad (1)</label>
+    
+  <input id="tab2" type="radio" name="tabs" class="tab">
+  <label id="lbl2" for="tab2">Infraestructura de Desarrollo (2)</label>
+    
+  <input id="tab3" type="radio" name="tabs" class="tab">
+  <label id="lbl3" for="tab3">Calidad de Vida (3)</label>
+    
+  <input id="tab4" type="radio" name="tabs" class="tab">
+  <label id="lbl4" for="tab4">Equidad e Inclusi�n Social (4)</label>
+  
+  <input id="tab5" type="radio" name="tabs" class="tab">
+  <label id="lbl5" for="tab5">Sostenibilidad Ambiental (5)</label>
+  
+  <input id="tab6" type="radio" name="tabs" class="tab">
+  <label id="lbl6" for="tab6">Gobernanza y Legislaci�n (6)</label>
+  
+ <input id="tab0" type="radio" name="tabs" class="tab" >
+  <label id="lbl0" for="tab0">S�ntesis de resultados</label>
+  
+   <input id="tab9" type="radio" name="tabs" class="tab"  onclick="javascript:document.location.reload();" />
+  <label id="lbl9" for="tab9">Reiniciar</label>
+
+<section id="content0" >
+
+
+
+<div id="content">			
+			
+
+				<div id='myChart6'></div>
+                <br>
+                <br>
+                
+                <div id='myChart7'></div>
+				
+
+			
+	
+				
+
+ 
+    
+</div>
+
+
+
+  </section>
+
+
+    
+  <section id="content1" >
+ 
+ 
+    
+ 
+	<div id="content">
+      <div id="sidebar">
+  
+  <h3>Valores de Referencia</h3>
+   <strong>Dimensi�n:</strong> <br>				
+  <div id="valo20"></div>
+ 
+
+ 
+ 
+ <form name="formulario" id="f_1">
+
+				</select> <br>Subdimensi�n: <br> <select
+					name="sub_dimension0" id="sub0" onChange="indicadores(0)"
+					onclick="indicadores(0)" onLoad="indicadores(0)">
+					<option value="1">Uno</option>
+				</select> <br> Indicador: <br> <select
+					name="indicador0" id="indica0" onChange="variables_cpi(0)"
+					onclick="variables_cpi(0)">
+					<option value="1">Uno</option>
+				</select> <br> Variable: <br> <select
+					name="variables0" id="vari0" onChange="valores(0)" onclick="valores(0)">
+					<option value="1">Uno</option>
+				</select> <br>
+			</form> 
+       <br><br>
+       <div id="variables0">
+				<strong>Capture el nuevo valor para las variables</strong>
+				
+				<div id="valo0"></div>
+
+				
+				<form>
+				<input type="button" onclick="ejecutar(0)" value="Actualizar...">               
+				</form>
+				
+				<form>
+				<!--
+				<button onclick="imprime(content)">Imprimir</button>
+				<a href="javascript:imprime('content')" >Imprimir texto</a>
+				<a href="javascript:desplegar('visible', 'mensaje')" >Imprimir texto</a>
+				-->
+				
+				</form>
+
+			</div>     
+            
+                       
+  	</div>
+
+    
+    
+    
+    
+			<div id="referencia">
+				<h3>Valores de Referencia</h3>				
+				<strong>Subdimensiones:</strong>
+				
+				<div id="valo30"></div>
+				
+				<br /> <strong>Indicadores:</strong>
+				
+				<div id="valo40"></div>
+				
+				<br /> <strong>Variables:</strong><br />
+                 <i><strong> <small>**Los valores en negrita y cursiva son datos capturados por el usuario</small></strong></i><br/>
+                 <div class="leyend" id="anio_variables" ></div>
+				
+				<div id="valo50"></div>			
+			</div>
+
+			
+			<div id="grafic">
+
+				<div id='myChart0'></div>
+
+			</div>
+	
+			</div>		 
+
+  </section>
+    
+  <section id="content2">
+   
+ <div id="content">
+  <div id="sidebar">
+  
+  <h3>Valores de Referencia</h3>
+   <strong>Dimensi�n:</strong> <br>				
+  <div id="valo21"></div>
+
+ <form name="formulario" id="f_2">
+
+				</select> <br>Subdimensi�n: <br> <select
+					name="sub_dimension1" id="sub1" onChange="indicadores(1)"
+					 onLoad="indicadores(1)">
+					<option value="1">Uno</option>
+				</select> <br> Indicador: <br> 
+				<select name="indicador1" id="indica1" onChange="variables_cpi(1)"
+					onclick="variables_cpi(1)">
+					<option value="1">Uno</option>
+				</select> <br> Variable: <br> <select
+					name="variables1" id="vari1" onChange="valores(1)" onclick="valores(1)">
+					<option value="1">Uno</option>
+				</select> <br>
+			</form>  
+             <br> <br>
+            <div id="variables1">
+				<strong>Capture el nuevo valor para las variables</strong>
+				
+				<div id="valo1"></div>				
+				<form>
+				<input type="button" onclick="ejecutar(1)" value="Actualizar...">
+				</form>
+
+			</div>          
+  	</div>
+	
+			<div id="referencia">
+				<h3>Valores de Referencia</h3>				
+				<strong>Subdimensiones:</strong>
+				
+				<div id="valo31"></div>
+				
+				<br /> <strong>Indicadores:</strong>
+				
+				<div id="valo41"></div>
+				
+				<br /> <strong>Variables:</strong><br />
+                <i><strong> <small>**Los valores en negrita y cursiva son datos capturados por el usuario</small></strong></i><br/>
+				<div class="leyend" id="anio_variables2" ></div>
+				<div id="valo51"></div>				
+			</div>
+
+			
+			<div id="grafic">
+
+				<div id='myChart1'></div>
+
+			</div>
+	
+			</div>		
+
+  </section>
+  
+  <section id="content3">
+  <div id="content">
+     <div id="sidebar">
+  
+  <h3>Valores de Referencia</h3>
+   <strong>Dimensi�n:</strong> <br>				
+  <div id="valo22"></div>
+
+ <form name="formulario" id="f_3">
+
+				</select> <br> Subdimensi�n: <br> <select
+					name="sub_dimension2" id="sub2" onChange="indicadores(2)"
+					 onLoad="indicadores(2)">
+					<option value="1">Uno</option>
+				</select> <br> Indicador: <br> <select
+					name="indicador2" id="indica2" onChange="variables_cpi(2)"
+					onclick="variables_cpi(2)">
+					<option value="1">Uno</option>
+				</select> <br>Variable: <br> <select
+					name="variables2" id="vari2" onChange="valores(2)" onclick="valores(2)">
+					<option value="1">Uno</option>
+				</select> <br>
+			</form>  
+            <br><br> 
+            <div id="variables2">
+				<strong>Capture el nuevo valor para las variables</strong>
+				
+				<div id="valo2"></div>				
+				<form>
+				<input type="button" onclick="ejecutar(2)" value="Actualizar...">
+				</form>
+
+			</div>         
+  	</div>
+	
+			<div id="referencia">
+				<h3>Valores de Referencia</h3>				
+				<strong>Subdimensiones:</strong>
+				
+				<div id="valo32"></div>
+				
+				<br /> <strong>Indicadores:</strong>
+				
+				<div id="valo42"></div>
+				
+				<br /> <strong>Variables:</strong><br />
+                <i><strong> <small>**Los valores en negrita y cursiva son datos capturados por el usuario</small></strong></i><br/>
+				<div class="leyend" id="anio_variables3" ></div>
+				<div id="valo52"></div>				
+			</div>
+
+			
+			<div id="grafic">
+
+				<div id='myChart2'></div>
+
+			</div>
+	
+			</div>		
+
+
+  </section>
+  
+    
+  <section id="content4">
+  <div id="content">
+   <div id="sidebar">
+  
+  <h3>Valores de Referencia</h3>
+   <strong>Dimensi�n:</strong> <br>				
+  <div id="valo23"></div>
+
+ <form name="formulario" id="f_4">
+
+				</select> <br>Subdimensi�n: <br> <select
+					name="sub_dimension3" id="sub3" onChange="indicadores(3)"
+					 onLoad="indicadores(3)">
+					<option value="1">Uno</option>
+				</select> <br>Indicador: <br> <select
+					name="indicador3" id="indica3" onChange="variables_cpi(3)"
+					onclick="variables_cpi(3)">
+					<option value="1">Uno</option>
+				</select> <br> Variable: <br> <select
+					name="variables3" id="vari3" onChange="valores(3)" onclick="valores(3)">
+					<option value="1">Uno</option>
+				</select> <br>
+			</form> 
+            <br><br> 
+            <div id="variables3">
+				<strong>Capture el nuevo valor para las variables</strong>
+				
+				<div id="valo3"></div>				
+				<form>
+				<input type="button" onclick="ejecutar(3)" value="Actualizar...">
+				</form>
+
+			</div>          
+  	</div>
+	
+			<div id="referencia">
+				<h3>Valores de Referencia</h3>				
+				<strong>Subdimensiones:</strong>
+				
+				<div id="valo33"></div>
+				
+				<br /> <strong>Indicadores:</strong>
+				
+				<div id="valo43"></div>
+				
+				<br /> <strong>Variables:</strong><br />
+                <i><strong> <small>**Los valores en negrita y cursiva son datos capturados por el usuario</small></strong></i><br/>
+				<div class="leyend" id="anio_variables4" ></div>
+				<div id="valo53"></div>				
+			</div>
+
+			
+			<div id="grafic">
+
+				<div id='myChart3'></div>
+
+			</div>
+	
+			</div>		
+
+  </section>
+    
+  <section id="content5">
+  <div id="content">
+     <div id="sidebar">
+  
+  <h3>Valores de Referencia</h3>
+   <strong>Dimensi�n:</strong> <br>				
+  <div id="valo24"></div>
+
+ <form name="formulario" id="f_5">
+
+				</select> <br>Subdimensi�n: <br> <select
+					name="sub_dimension4" id="sub4" onChange="indicadores(4)"
+					 onLoad="indicadores(4)">
+					<option value="1">Uno</option>
+				</select> <br> Indicador: <br> <select
+					name="indicador4" id="indica4" onChange="variables_cpi(4)"
+					onclick="variables_cpi(4)">
+					<option value="1">Uno</option>
+				</select> <br> Variable: <br> <select
+					name="variables4" id="vari4" onChange="valores(4)" onclick="valores(4)">
+					<option value="1">Uno</option>
+				</select> <br>
+			</form> 
+            <br><br>
+            <div id="variables4">
+				<strong>Capture el nuevo valor para las variables</strong>
+				
+				<div id="valo4"></div>				
+				<form>
+				<input type="button" onclick="ejecutar(4)" value="Actualizar...">
+				</form>
+
+			</div>           
+  	</div>
+	
+			<div id="referencia">
+				<h3>Valores de Referencia</h3>				
+				<strong>Subdimensiones:</strong>
+				
+				<div id="valo34"></div>
+				
+				<br /> <strong>Indicadores:</strong>
+				
+				<div id="valo44"></div>
+				
+				<br /> <strong>Variables:</strong><br />
+                <i><strong> <small>**Los valores en negrita y cursiva son datos capturados por el usuario</small></strong></i><br/>
+				<div class="leyend" id="anio_variables5" ></div>
+				<div id="valo54"></div>				
+			</div>
+
+			
+			<div id="grafic">
+
+				<div id='myChart4'></div>
+
+			</div>
+	
+			</div>		
+
+
+  </section>
+  
+  <section id="content6">
+  <div id="content">
+     <div id="sidebar">
+  
+  <h3>Valores de Referencia</h3>
+   <strong>Dimensi�n:</strong> <br>				
+  <div id="valo25"></div>
+
+ <form name="formulario" id="f_6">
+
+				</select> <br> Subdimensi�n: <br> <select
+					name="sub_dimension5" id="sub5" onChange="indicadores(5)"
+					 onLoad="indicadores(5)">
+					<option value="1">Uno</option>
+				</select> <br> Indicador: <br> <select
+					name="indicador5" id="indica5" onChange="variables_cpi(5)"
+					onclick="variables_cpi(5)">
+					<option value="1">Uno</option>
+				</select> <br> Variable: <br> <select
+					name="variables5" id="vari5" onChange="valores(5)" onclick="valores(5)">
+					<option value="1">Uno</option>
+				</select> <br>
+			</form>  
+            <br><br>
+            <div id="variables5">
+				<strong>Capture el nuevo valor para las variables</strong>
+				
+				<div id="valo5"></div>				
+				<form>
+				<input type="button" onclick="ejecutar(5)" value="Actualizar...">
+				</form>
+
+			</div>          
+  	</div>
+	
+			<div id="referencia">
+				<h3>Valores de Referencia</h3>				
+				<strong>Subdimensiones:</strong>
+				
+				<div id="valo35"></div>
+				
+				<br /> <strong>Indicadores:</strong>
+				
+				<div id="valo45"></div>
+				
+				<br /> <strong>Variables:</strong><br />
+                <i><strong> <small>**Los valores en negrita y cursiva son datos capturados por el usuario</small></strong></i><br/>
+				<div class="leyend" id="anio_variables6" ></div>
+				<div id="valo55"></div>				
+			</div>
+
+			
+			<div id="grafic">
+
+				<div id='myChart5'></div>
+
+			</div>
+	
+			</div>		
+
+  </section>
+  
+  
+  <section id="content7">
+
+  <div id="content">
+  <div id="referencia">
+    <h3>Lista de variables:</h3>
+  </div>
+  <div id="sidebar" >
+   
+     <form>
+	
+     Seleccione el a�o a pronosticar: <select name="anio_pronos" id="a_pronos" onChange="cal_pronost()" onclick="cal_pronost()">
+     				<option>Selecione el a�o </option>
+					<option value=2016>2016</option>
+                    <option value=2017>2017</option>
+                    <option value=2018>2018</option>
+                    <option value=2019>2019</option>
+                    <option value=2020>2020</option>
+                    <option value=2021>2021</option>
+                    <option value=2022>2022</option>
+                    <option value=2023>2023</option>
+                    <option value=2024>2024</option>
+                    <option value=2025>2025</option>
+                    <option value=2026>2026</option>
+                    <option value=2027>2027</option>
+                    <option value=2028>2028</option>
+                    <option value=2029>2029</option>
+                    <option value=2030>2030</option>
+                    <option value=2031>2031</option>
+				</select>
+   <input id="actua" type="button" onclick="resuelve()" value="Actualizar..."><br />
+   
+   <small style="color:#559929;">*Variables con TCMA del 2%</small><br/>
+  <i><strong> <small>**Los valores en negrita y cursiva son datos capturados por el usuario</small></strong></i><br/>
+  <i><small>***<u> Los valores subrayados son ajustados por el sistema</u></small></i>
+  </form>
+    </div>
+     </div>
+   <form name="formulario" id="f_7">
+  <div id="valo7"></div>
+  </form>
+   <div id="content">  
+   <div id="referencia"></div>
+   <div id="sidebar" >
+  <form>
+	
+  <!-- <input type="button" onclick="resuelve()" value="Actualizar...">-->
+   <input type="button" onclick="resuelve()" value="Actualizar...">
+  </form>
+  </div>
+  </div>
+  
+   </section>
+ 
+   <section id="content8" class="margenes" >
+
+  <p>Esta herramienta inform�tica pretende replicar los c�lculos realizados para la medici�n del �ndice de Prosperidad Urbana (CPI), que se utilizaron para la generaci�n del �ndice B�sico de Ciudad Pr�spera del municipio de Quer�taro, estos c�lculos son los mismos que se utilizaron en otros 151 municipios de la Rep�blica Mexicana. Sin embargo se realizaron modificaciones para que sea m�s aplicado a Quer�taro y se adecu� para una mejor medici�n a nivel local. Los c�lculos se fundamentan, a su vez, en la metodolog�a utilizada por ONU-H�bitat en la Iniciativa de Ciudades Pr�speras.<br><br>
+El �ndice B�sico de Ciudad Pr�spera est� constituido por 6 dimensiones. Cada dimensi�n, a su vez, est� constituida por diferentes subdimensiones. Cada subdimensi�n se compone de diferentes indicadores. Los indicadores son calculados a partir de variables, las que miden alg�n aspecto de la realidad del municipio.<br><br>
+De esta manera el CPI produce seis sub�ndices relativos a seis dimensiones de la prosperidad: productividad, infraestructura, calidad de vida, inclusi�n y equidad, sustentabilidad ambiental, y finalmente, gobernanza y legislaci�n.<br><br>
+Al agregar estas seis subdimensiones se produce un valor consolidado que representa el CPI del municipio en cuesti�n.<br><br>
+El objetivo de esta herramienta inform�tica, es que el usuario pueda modificar los valores de las variables, y de esta manera se producir� un nuevo valor para cada dimensi�n y uno para el CPI. As� se pueden hacer comparaciones con los resultados publicados en el Informe Final Municipal de Quer�taro y entender c�mo afectar�an cambios en los valores de variables la calificaci�n general de la ciudad. En esta aplicaci�n, el usuario podr� navegar entre las seis diferentes dimensiones a trav�s de men�s para hacer cambios en las variables, que se ver�n reflejados tanto tabular como gr�ficamente.<br><br>
+Para el calculo de la calificaci�n actual los valores que se usaron son en su mayoria datos del a�o 2015 de la Encuesta Intercensal INEGI 2015. Por lo cual la calificaci�n general del CPI para el municipio de Queretaro presentada aqu� difiere a la del Informe Final Municipal Quer�taro publicado por la ONU-HABITAT que en su mayoria son datos del a�o 2010 del Censo INEGI 2010.<br><br>
+Esta herramienta se concibi� para ser alojada en una p�gina web, de esta manera se facilita su uso y difusi�n. No es necesario instalar ni configurar ning�n software y no tiene requisitos previos para su uso. Evidentemente se requiere tener conexi�n a internet y un navegador de p�ginas web.<br><br>
+El uso de esta herramienta est� enfocado a identificar oportunidades y �reas potenciales de intervenci�n para los gobiernos y grupos locales, para que la ciudad sea m�s pr�spera.<br><br>
+
+La herramienta contiene ayudas visuales, explicaciones en texto y gr�ficas sobre los conceptos y t�rminos t�cnicos empleados, e interpretaciones de los valores y resultados obtenidos; as� como un manual para su uso sencillo y adecuado.</p>
+  
+  
+  
+  
+  
+
+  </section>  
+   
+   
+      
+  
+      
+</main>
+
+
+
+	<div id="footer" >"Esta (obra, programa o acci�n) es de car�cter p�blico; no es patrocinado ni promovido por partido pol�tico alguno y sus recursos provienen de los ingresos que aportan todos los contribuyentes. Est� prohibido el uso de esta (obra, programa o acci�n) con fines pol�ticos, electorales de lucro y otros distintos a los establecidos. Quien haga uso indebido de los recursos de esta (obra, programa o acci�n), deber� ser denunciado y sancionado de acuerdo con la ley aplicable y ante la autoridad competente."
+	
+	</div>
+	
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,450 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #eee;
+}
+
+h1 {
+  padding: 20px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+main {
+  min-width: 320px;
+  max-width: 1024px;
+  padding: 5px inherit;
+  margin: 0 auto;
+  background: #fff;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input.tab {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label[for*='1']:before { content: '\f085'; }
+label[for*='2']:before { content: '\f1ad'; }
+label[for*='3']:before { content: '\f004'; }
+label[for*='4']:before { content: '\f0c0'; }
+label[for*='5']:before { content: '\f1bb'; }
+label[for*='6']:before { content: '\f0e3'; }
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid green;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6
+{
+  
+  
+  display: block;
+
+
+}
+
+
+
+//****** lo que tenia en el otro*/
+
+	div.contenedor {
+    display: table;
+    border: 2px solid #CCC;
+    width: 300px;
+    text-align: left;
+    margin: 0 auto;
+	}
+	div.contenidos{
+    display: table-row;
+	}
+	div.columna1, .columna2, .columna3 {
+    display: table-cell;
+    border: 1px solid #CCC;
+    vertical-align: middle;
+    padding: 10px;
+	}
+	div.columna3 {
+	font-weight: bold;
+	color:#FF0000;
+	}
+/* borde & guideline (puedes ignorarlo) */
+#sidebar {
+	background: #f0efef;
+}
+
+#content {
+	background: #f8f8f8;
+}
+
+#variables {
+	background: #f8f8f2;
+}
+
+#referencia {
+	background: #f8f8f2;
+}
+
+#header, #content, #sidebar {
+	margin-bottom: 5px;
+}
+
+#pagewrap, #header, #content, #sidebar, #footer, #variables, #referencia
+	{
+	border: solid 1px #ccc;
+}
+
+body {
+	font: 1em/150% Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: #669;
+	texto-decoration: none;
+}
+
+a:hover {
+	texto-decoration: underline;
+}
+
+h1 {
+	font: bold 36px/100% Arial, Helvetica, sans-serif;
+}
+
+/*************para el logo del ecabezado ************/
+div.img {
+	border: 1px solid #ccc;
+	background:#FFF;
+}
+
+div.img:hover {
+	border: 1px solid #777;
+}
+
+div.img img {
+	width: auto;
+	/*height: auto;*/
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+
+/** {
+	box-sizing: border-box;
+}*/
+
+/************************************************************************************
+ESTRUCTURA
+*************************************************************************************/
+#pagewrap {
+	padding: 5px;
+	width: 1000px;
+	margin: 20px auto;
+}
+
+#header {
+	height: 230px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#sidebar {
+	width: 305px;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+    display: block;
+}
+
+#content {
+	width: 680px;
+	float: right;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#referencia {
+	width: 49%;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#variables {
+	width: 49%;
+	float: right;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#titulo {
+	width: 50%;
+	float: right;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#valor_CPI {
+	width: 100%;
+	/*float: right;*/
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#responsive {
+	padding: 10px;
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+#grafic {
+	width: 100%;
+}
+
+#footer {
+	clear: both;
+}
+
+#myChart0, #myChart1, #myChart2, #myChart3, #myChart4, #myChart5  {
+	width: 650px;
+	float: left;
+}
+
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* para 980px o menos */
+@media screen and (max-width: 980px) {
+	#pagewrap {
+		width: 94%;
+	}
+	#sidebar {
+		width: 30%;
+	}
+	#content {
+		width: 69%;
+	}
+	#referencia {
+		width: auto;
+		float: none;
+	}
+	#variables {
+		width: auto;
+		float: none;
+	}
+	#myChart0, #myChart1, #myChart2, #myChart3, #myChart4, #myChart5 {
+		width: 80%;
+	}
+	zingchart.render ({
+		id: 'myChart0', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart1', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart2', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart3', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart4', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart5', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+}
+
+/* para 700px o menos */
+@media screen and (max-width: 722px) {
+	#header {
+		height: auto;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+	#content {
+		width: auto;
+		float: none;
+	}
+	#referencia {
+		width: auto;
+		float: none;
+	}
+	#variables {
+		width: auto;
+		float: none;
+	}
+	#myChart0, #myChart1, #myChart2, #myChart3, #myChart4, #myChart5 {
+		width: 80%;
+		float: none;
+	}
+	#responsive {
+		width: auto;
+		float: inherit;
+	}
+	#titulo {
+		width: auto;
+		float: inherit;
+	}
+	#valor_CPI {
+		width: auto;
+		float: inherit;
+	}
+	div.img img {
+		width: 70%;
+		height: auto;
+	}
+
+	/* para 700px o menos */
+	@media screen and (max-width: 707px) {
+		#responsive {
+			width: auto;
+		}
+		#titulo {
+			width: auto;
+		}
+		#valor_CPI {
+			width: auto;
+		}
+		div.img img {
+			width: 50%;
+		}
+	}
+	@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+
+	
+	
+	
+	/* para 480px o menos */
+	@media screen and (max-width: 480px) {
+		h1 {
+			font-size: 24px;
+		}
+		#sidebar {
+			height: auto;
+			/*display: none;*/
+		}
+		#responsive {
+			width: auto;
+		}
+		#titulo {
+			width: auto;
+		}
+		#valor_CPI {
+			width: auto;
+		}
+		div.img img {
+			width: 50%;
+			height: auto;
+		}
+	}
+	.clearfix:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	#myChart0, #myChart1, #myChart2, #myChart3, #myChart4, #myChart5 {
+		height: 100%;
+		width: 100%;
+	}
+	div.contenedor {
+		display: table;
+		border: 2px solid #CCC;
+		width: 300px;
+		text-align: left;
+		margin: 0 auto;
+	}
+	div.contenidos {
+		display: table-row;
+	}
+	div.columna1, .columna2, .columna3 {
+		display: table-cell;
+		border: 1px solid #CCC;
+		vertical-align: middle;
+		padding: 10px;
+	}
+	@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+    
+  }
+}

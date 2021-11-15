@@ -1,0 +1,70 @@
+/*# sourceURL=estilos/Estilo_Listas_documentos.css */
+/*@ sourceURL=estilos/Estilo_Listas_documentos.css */
+@charset "utf-8";
+/* CSS Document */
+.lista_documentos
+{
+	 padding-top:5px;
+	 padding-bottom:5px;
+	background:#fff;
+	color:#000;
+	
+	/*width:80%;*/
+	margin-right:auto;
+
+	margin-left:auto;	
+	font-size:14px;
+}
+
+.lista_documentos ul
+{
+	list-style:none;
+}
+
+.lista_documentos ul li
+{
+	color:rgb(14, 13, 13);
+	display:block;
+	background:#fff;
+	width:90%;
+	max-width:322px;
+	height:100%;
+	padding-bottom:5px;
+	padding-top:3px;
+	
+	
+	margin-left:auto;
+	margin-right:auto;
+	
+
+}
+
+.lista_documentos ul li a
+{
+	 text-align:center;
+	 color: #39F;
+	 
+	 
+}
+
+.lista_documentos ul li:hover
+{
+	color:#39F;
+	
+}
+
+.tamano_pdf
+{
+	width:93%;
+	height:720px;
+	margin-left:25px;
+	margin-bottom:25px;	
+}
+
+.fondo_pdf
+{
+	margin-left:25px;
+	margin-right:25px;
+	background:#fff;
+	
+}

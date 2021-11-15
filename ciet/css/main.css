@@ -1,0 +1,683 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css');
+
+/************************** Ventana modal con js (background) ***************************************/
+#bgventana{
+	position: fixed;
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 1;	
+	/*visibility: hidden;*/ 
+	border-radius: 10px;
+}
+
+div.bgventana_hid {
+	visibility: hidden;
+}
+
+.close_def {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#bgventana2{
+	position: fixed;
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 1;	
+	visibility: hidden;
+	border-radius: 10px;
+
+
+	
+}
+#ventana{
+	position: absolute;
+	background-color: #D3DCE3;
+	border: solid #FFF 10px;
+	width: 50%;
+	height: auto;
+	top: 25%;
+	left: 25%;
+
+	border-radius: 4px;
+	padding: 10px;
+	
+}
+
+#cerrar {
+	display:none;
+	text-align: right;
+
+	
+}
+
+#btn-cerrar {
+	display: block;
+    /* margin: 0 0 -1px; */
+    /* padding: 15px 25px; */
+    font-weight: 600;
+    text-align: right;
+}
+
+#cerrar + label {
+ 	position:fixed;
+	color:#fff;
+	font-size: 25px;
+	z-index:50;
+	background: darkred;
+	height:40px;
+	width:40px;
+	line-height:40px;
+	border-radius=50%;
+	right:10px;
+	cursor:pointer;
+	
+	
+	}
+	
+#cerrar:checked + label, #cerrar:checked ~ .bgventana{
+	display:none;
+}
+
+@keyframes modal{
+	100% {
+		visibility: visible;
+		opacity:1;
+		}
+	
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #eee;
+}
+
+h1 {
+  padding: 20px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+main {
+  min-width: 320px;
+  max-width: 1024px;
+  padding: 5px inherit;
+  margin: 0 auto;
+  background: #fff;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input.tab {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 5px 10px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+label[for*='0']:before { content: '\f080'; }
+label[for*='1']:before { content: '\f085'; }
+label[for*='2']:before { content: '\f1ad'; }
+label[for*='3']:before { content: '\f004'; }
+label[for*='4']:before { content: '\f0c0'; }
+label[for*='5']:before { content: '\f1bb'; }
+label[for*='6']:before { content: '\f0e3'; }
+label[for*='7']:before { content: '\f040'; }
+label[for*='8']:before { content: '\f015'; }
+label[for*='9']:before { content: '\f01e'; }
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid green;
+  border-bottom: 1px solid #fff;
+}
+#tab0:checked ~ #content0,
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6,
+#tab7:checked ~ #content7,
+#tab8:checked ~ #content8,
+#tab9:checked ~ #content9
+{
+  
+  
+  display: block;
+
+
+}
+
+
+
+//****** lo que tenia en el otro*/
+
+	div.contenedor {
+    display: table;
+    border: 2px solid #CCC;
+    width: 300px;
+    text-align: left;
+    margin: 0 auto;
+	}
+	div.contenidos{
+    display: table-row;
+	}
+	div.columna1, .columna2, columna22, .columna3, columna33 {
+    display: table-cell;
+    border: 1px solid #CCC;
+    vertical-align: middle;
+    padding: 10px;
+	mouse
+	}
+	
+	div.columna4 {
+    display: table-cell;
+    border: 0px solid #CCC;
+    vertical-align: middle;
+    padding: 10px;
+	font-size:28px;
+    color:#294c99;
+	cursor: pointer;
+	}
+	
+	div.columna22 {  
+	color:#559929;  
+    display: table-cell;
+    border: 1px solid #CCC;
+    vertical-align: middle;
+    padding: 10px;
+	mouse
+    
+	
+	}
+	
+	div.columna33 {  
+	color:#559929;  
+    display: table-cell;
+    border: 1px solid #CCC;
+    vertical-align: middle;
+    padding: 10px;
+	mouse
+    
+	
+	}
+	
+	.leyend {  
+	color:#ff0000; 
+	font-size:small;
+	font-weight:bold; 
+  	}
+	
+	div.encabezado {
+    display: table-cell;
+    border: 0px solid #CCC;
+    vertical-align: middle;
+    padding: 4px;
+    font-size:12px;
+    color:#294c99;
+	mouse
+	}
+	div.liga{
+		text-decoration:underline;
+		cursor:pointer;}
+	div.columna3 {
+	font-weight: bold;
+	color:#FF0000;
+	}
+	div.columna33 {
+	font-weight: bold;
+	font-style: italic;
+	color:#000000;
+	}
+		div.liga2{
+		display: table-cell;
+		border: 1px solid #CCC;
+		vertical-align: middle;
+		padding: 10px;
+		font-family: "Times New Roman", Times, serif;
+		font-style: italic;
+		/*text-decoration:underline;*/
+		font-size: large;
+		color:#294c99;
+		font-weight: bold;
+		cursor:pointer;}	
+/* borde & guideline (puedes ignorarlo) */
+#sidebar {
+	background: #f0efef;
+}
+
+#content {
+	background: #f8f8f8;
+}
+
+#variables {
+	background: #f8f8f2;
+}
+
+#referencia {
+	background: #f8f8f8;
+}
+
+#header, #content, #sidebar {
+	margin-bottom: 5px;
+}
+
+#pagewrap, #header, #content, #sidebar, #footer, #variables/*, #referencia*/
+	{
+	border: solid 1px #ccc;
+}
+#footer{
+ /*display: table-cell;*/
+   
+  vertical-align: middle;
+    padding: 10px;
+	font-size:smaller;
+	font-family:"Times New Roman", Times, serif;
+    color:#294c99;
+	
+}
+
+body {
+	font: 1em/150% Arial, Helvetica, sans-serif;
+}
+
+a {
+	color: #669;
+	texto-decoration: none;
+}
+
+a:hover {
+	texto-decoration: underline;
+}
+
+h1 {
+	font: bold 36px/100% Arial, Helvetica, sans-serif;
+}
+
+/*************para el logo del ecabezado ************/
+div.img {
+	border: 1px solid #ccc;
+	background:#FFF;
+}
+
+div.img:hover {
+	border: 1px solid #777;
+}
+
+div.img img {
+	width: auto;
+	/*height: auto;*/
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+.margenes{
+	
+	padding: 15px;
+	
+}
+.titulo_def{
+	
+	font-weight: bold;
+}
+
+/** {
+	box-sizing: border-box;
+}*/
+
+/************************************************************************************
+ESTRUCTURA
+*************************************************************************************/
+#pagewrap {
+	padding: 5px;
+	width: 1000px;
+	margin: 20px auto;
+	z-index: 2;
+}
+
+#header {
+	height: 230px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#sidebar {
+	/*width: 305px;*/
+	width: 49%;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+    display: block;
+    z-indez:1;
+}
+
+#content {
+	width: 989px;
+	float: right;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#referencia {
+	width: 49%;
+	float: left;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#variables {
+	width: 49%;
+	float: right;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#titulo {
+	width: 50%;
+	float: right;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#valor_CPI {
+	width: 100%;
+	/*float: right;*/
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#responsive {
+	padding: 10px;
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+#grafic {
+	width: 100%;
+}
+
+#footer {
+	clear: both;
+}
+
+#myChart0, #myChart1, #myChart2, #myChart3, #myChart4, #myChart5  {
+	width: 100%;
+	/*width: 650px;*/
+	float: left;
+	/*width: 90%;
+	float: left;*/
+}
+
+#myChart6  {
+	width: 950px;
+	float: left;
+}
+#myChart7  {
+	width: 950px;
+	float: left;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* para 980px o menos */
+@media screen and (max-width: 980px) {
+	#pagewrap {
+		width: 94%;
+	}
+	#sidebar {
+		width: 99%;
+	}
+	#content {
+		width: 100%;
+	}
+	#referencia {
+		width: auto;
+		float: none;
+	}
+	#variables {
+		width: auto;
+		float: none;
+	}
+	#myChart0, #myChart1, #myChart2, #myChart3, #myChart4, #myChart5, #myChart6, #myChart7  {
+		width: 100%;
+	}
+	zingchart.render ({
+		id: 'myChart0', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart1', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart2', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart3', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart4', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	zingchart.render ({
+		id: 'myChart5', data: myConfig, height: '99%', width: '99%'
+	}
+	);
+	
+	zingchart.render ({
+		id: 'myChart6', data: myConfig, height: '99%', width: '10%'
+	});
+	zingchart.render ({
+		id: 'myChart7', data: myConfig, height: '99%', width: '10%'
+	}
+	);
+}
+
+/* para 700px o menos */
+@media screen and (max-width: 722px) {
+	#header {
+		height: auto;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+	#content {
+		width: auto;
+		float: none;
+	}
+	#referencia {
+		width: auto;
+		float: none;
+	}
+	#variables {
+		width: auto;
+		float: none;
+	}
+	#myChart0, #myChart1, #myChart2, #myChart3, #myChart4, #myChart5 {
+		width: 100%;
+		float: none;
+	}
+	#myChart6 {
+		width: 100%;
+		float: none;
+	}
+	#myChart7 {
+		width: 100%;
+		float: none;
+	}
+	#responsive {
+		width: auto;
+		float: inherit;
+	}
+	#titulo {
+		width: auto;
+		float: inherit;
+	}
+	#valor_CPI {
+		width: auto;
+		float: inherit;
+	}
+	div.img img {
+		width: 70%;
+		height: auto;
+	}
+
+	/* para 700px o menos */
+	@media screen and (max-width: 707px) {
+		#responsive {
+			width: auto;
+		}
+		#titulo {
+			width: auto;
+		}
+		#valor_CPI {
+			width: auto;
+		}
+		div.img img {
+			width: 50%;
+		}
+	}
+	@media screen and (max-width: 650px) {
+  label {
+    font-size: 0;
+  }
+  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+
+	
+	
+	
+	/* para 480px o menos */
+	@media screen and (max-width: 480px) {
+		h1 {
+			font-size: 24px;
+		}
+		#sidebar {
+			height: auto;
+			/*display: none;*/
+		}
+		#responsive {
+			width: auto;
+		}
+		#titulo {
+			width: auto;
+		}
+		#valor_CPI {
+			width: auto;
+		}
+		div.img img {
+			width: 50%;
+			height: auto;
+		}
+	}
+	.clearfix:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	#myChart0, #myChart1, #myChart2, #myChart3, #myChart4, #myChart5, #myChart6, #myChart7  {
+		height: 100%;
+		width: 100%;
+	}
+	div.contenedor {
+		display: table;
+		border: 2px solid #CCC;
+		width: 300px;
+		text-align: left;
+		margin: 0 auto;
+	}
+	div.contenidos {
+		display: table-row;
+	}
+	div.columna1, .columna2, columna22, .columna3 {
+		display: table-cell;
+		border: 1px solid #CCC;
+		vertical-align: middle;
+		padding: 10px;
+	}
+	div.liga{
+		text-decoration:underline;
+		cursor:pointer;}
+		
+	div.liga2{
+		display: table-cell;
+		border: 1px solid #CCC;
+		vertical-align: middle;
+		padding: 10px;
+		font-family: "Times New Roman", Times, serif;
+		text-decoration:underline;
+		cursor:pointer;}	
+	@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+    
+  }
+}
+
+

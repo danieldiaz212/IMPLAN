@@ -1,0 +1,98 @@
+.contenedor {
+    display: grid;
+grid-gap: 10px;
+	padding: 30px 5% 10px;
+	width: 100%;
+    height: auto;
+	margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+    align-items: center;
+	text-align: center;
+	text-decoration: wavy;
+    overflow:auto;
+    
+	grid-template-columns: repeat(auto-fill,1fr);
+
+
+}
+.contenedor div{
+    padding: 1px ;
+    
+    margin-left: auto;
+    margin-right: auto;
+    outline-offset: 5px;
+border: 2px solid #5878ca;
+
+border-radius: 40%;
+box-shadow: 3px 3px gray;
+background: linear-gradient(-100deg, #ebf7e0, #faf8e3, rgb(250, 236, 236),rgb(238, 252, 238)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: 400% 300%;
+animation: BgGradient 10s ease infinite;
+}
+.contenedor p{
+    padding: 8%;
+    text-decoration: none;
+    color: black;
+    width: 95%;
+    height: auto;
+    text-align:center;
+    align-content: center;
+    font-size: .8rem;
+    margin: auto;
+   
+    
+} 
+.contenedor a{
+    text-decoration: none;
+    color: black; 
+font-size: 1em; 
+
+text-align: center; 
+margin: 0 auto; 
+
+padding: 2px; 
+
+
+}
+.i1 p,.i2 p,.i3 p,.p1 p,.p2 p,.p3 p,.p4 p,.p5 p{
+width: 200px;
+    font-size: 1em;
+    text-align: center;
+}
+.i1,.i2,.i3,.p5{
+    margin-bottom: 40px;
+}
+.contenedor .d1:hover{
+transform: scale(.8);
+transition: 900ms;
+}
+
+.contenedor .d2:hover{
+    transform: scale(.8);
+    transition: 900ms;
+    }
+
+    .contenedor .d3:hover{
+        transform: scale(.8);
+        transition: 900ms;
+        }
+        .contenedor .d4:hover{
+            transform: scale(.8);
+            transition: 900ms;
+            }
+        
+            .contenedor .d5:hover{
+                transform: scale(.8);
+                transition: 900ms;
+                }
+                .contenedor .d6:hover{
+                    transform: scale(.8);
+                    transition: 900ms;
+                    }
+                    @keyframes BgGradient {
+                        0% {background-position: 0% 50%;}
+                        50% {background-position: 100% 50%;}
+                        100% {background-position: 0% 50%;}
+                    }

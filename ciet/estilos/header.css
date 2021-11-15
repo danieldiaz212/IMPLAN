@@ -1,0 +1,283 @@
+/*# sourceURL=estilos/header.css */
+/*@ sourceURL=estilos/header.css */
+@font-face
+{
+   font-family: "Lato";
+   src: url("http://implanqueretaro.gob.mx/ciet/estilos/fonts/fonts/lato.eot");
+   src: url("http://implanqueretaro.gob.mx/ciet/estilos/fonts/fonts/lato.eot?#amocristalab") format("embedded-opentype"),
+        url("http://implanqueretaro.gob.mx/ciet/estilos/fonts/fonts/lato.woff") format("woff"),
+        url("http://implanqueretaro.gob.mx/ciet/estilos/fonts/fonts/lato.ttf") format("truetype"),
+        url("http://implanqueretaro.gob.mx/ciet/estilos/fonts/fonts/lato.svg#IDdelafuente") format("svg");
+}
+
+@font-face {
+	font-family: 'codropsicons';
+	src:url("http://implanqueretaro.gob.mx/ciet/estilos/../fonts/codropsicons/codropsicons.eot");
+	src:url("http://implanqueretaro.gob.mx/ciet/estilos/../fonts/codropsicons/codropsicons.eot?#iefix") format('embedded-opentype'),
+		url("http://implanqueretaro.gob.mx/ciet/estilos/../fonts/codropsicons/codropsicons.woff") format('woff'),
+		url("http://implanqueretaro.gob.mx/ciet/estilos/../fonts/codropsicons/codropsicons.ttf") format('truetype'),
+		url("http://implanqueretaro.gob.mx/ciet/estilos/../fonts/codropsicons/codropsicons.svg#codropsicons") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	}
+	
+header {
+    width: 100%;
+    overflow: hidden;
+    height: 80px;
+    position:relative;
+    z-index:1100;
+    max-height:100px;
+    margin-top:0px;
+    margin-left:0px;
+    background:#fff;
+    
+  
+   border-bottom-style:solid;
+	border-bottom-color:#364f87;
+    border-bottom-width:thick; 
+   /* background:#fff;*/
+        
+  
+
+}
+
+
+/*Botón menú*/
+
+.menu_bar{
+	display:none;
+}
+
+.main{
+    width:100%;
+    display:flex;
+    flex-flow:row no-wrap;
+    align-items:center;}
+
+/*Section logo y menu*/
+.logo{
+	max-width:320px;
+	max-height:100px;
+	margin-top:-5px;
+	z-index:1000;
+	width:130px;
+	margin-left:15%;
+	
+	    }
+ /*Navegador de menu*/
+ nav {
+    top:0px;
+    position:absolute;
+	margin-left:30%;
+	width:50%;
+	
+	
+	
+}
+
+nav ul {
+	list-style:none;}
+ 
+nav > ul {
+	display:table;
+	width:100%;
+	height:200%;
+	background:#fff;
+	position:relative;}
+ 
+nav > ul > li {
+	display:table-cell;
+	background:#fff;
+	min-height:250px;
+	}
+
+/*menu principal*/
+nav > ul > li > a {
+	color:#b8b8b8;
+	width:100%;
+	max-width:400px;
+	
+	height:100%;
+	display: block;
+	line-height:10px;
+	
+	padding:25px;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+    z-index:1000;
+    background:#fff;
+	transition: all .1s ease;}
+
+
+ /*cambio de color cuando esta arriba*/
+
+/*Sub-menu*/
+
+ /*cambio de color cuando esta arriba*/
+
+header nav ul li:hover .children {
+	display:block;
+	top:50px;
+	
+
+}
+header nav ul li:hover > a {
+		color:#000;
+}
+
+
+
+/*submenus antes de aparecer*/
+ 
+header nav ul li .children {
+    display: block;
+	background:#fff; 
+	position:fixed;
+	width:100%;
+	max-width:250px;
+	color:#b8b8b8;
+	text-align:left;
+	top:-250px;
+    line-height:20px;
+	padding:20px;
+    /*margin-left:500px;*/
+    transition: all .3s ease;
+
+	
+}
+
+header nav ul li ul li{
+	margin-bottom:20px;
+	margin-top:20px;
+	margin-left:20px;
+}
+ /*Letra submenu*/
+header nav ul li ul li a
+{	
+
+	text-align: start;
+	/*margin-left:10px;*/
+	color:#b8b8b8;
+	/*padding:10px;*/
+	text-decoration:none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:small;
+        transition: all .3s ease;
+
+}
+
+
+
+@media screen and (max-width: 680px) {
+	.contenedor
+	{
+		margin-top:100px;
+	}
+	.menu_bar {
+		display:block;
+		width:60%;
+		max-height:72px;
+		position: fixed;
+		top:-5;  
+		height:100%;
+		margin-left:25%;
+	
+    	background:#fff;
+    	border-left-style:solid;
+	border-left-color:#364f87;
+    border-left-width: thin;
+
+	}
+ 
+	.menu_bar .bt-menu {
+		display:block;
+		overflow:hidden;
+		padding: 20px;
+		color: #6d6d6d;
+		font-size: 25px;
+		font-weight:bold;
+        font-family:Arial, Helvetica, sans-serif;
+		text-decoration: none;
+			}
+			
+	
+/*Section logo y menu*/
+.logo{
+	max-width:320px;
+	max-height:100px;
+	top:-5px;
+	z-index:1000;
+	width:130px;
+	margin-left:1%; }
+
+ 
+	.menu_bar span{
+		float:right;
+		font-size: 20px;
+    	}
+	 
+	nav {
+		width: 60%;
+		height: 100%;
+		
+		position: fixed;
+		top:8%;
+		left:150%;
+		overflow: scroll;
+		
+		
+		
+	}
+	
+	header
+	{
+		position:fixed;
+		top:-5px;
+	}
+ 
+	header nav > ul > li {
+		display: inline;
+		border-bottom:1px solid rgba(98,127,183,.5);
+	}
+	
+		
+	
+	
+	header nav ul li:hover .children {
+		display: block;
+		margin-bottom:20px;
+		top:-10px;
+	}
+ 
+	header nav ul li .children{
+		width:120%;
+		height:100%;
+		position:relative;
+		color:#fff;
+		display:none;
+	    background:#f9f9f9;
+	    transition: all .3s ease;
+	    margin-left:20%;
+	}
+   
+   	
+	
+ 
+ 
+		}
+
+
+ 
+
+

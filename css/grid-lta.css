@@ -1,0 +1,109 @@
+.grid{
+    padding-top: 10px;
+	width: 80%;
+    height: auto;
+	align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: 1 fr;
+display: grid;
+grid-gap: 10px;
+background-color:white;
+}
+
+h4{
+    padding-top: 30px;
+
+}
+h3{
+    font-size: calc(.5em + .5vw);;
+}
+.grid p{
+    margin: 1px 5%;
+text-align: justify;
+font-size: 15px;
+}
+
+h1,h2{
+		
+    padding-top: 60px;
+    font-size: calc(1em + 1vw);
+line-height: 30px;
+letter-spacing: 1px;
+font-weight: 600;
+color: #011b19;
+border-bottom: 2px solid #01897e6e;
+padding-bottom: 10px;
+background-color: var(--bg);
+text-align: center;
+box-shadow: 1x gray;
+
+}
+p{
+background-color: var(--bg);
+line-height: 30px;
+
+}
+ 
+.menuCSS3{
+    margin-left: auto;
+    margin-right: auto;
+align-self: center;
+align-content: center;
+}
+
+.menuCSS3 ul {
+    display: flex;
+    margin-left: 0%;
+    margin-right: 0%;
+    list-style: none;
+   
+}   
+
+.menuCSS3 a {
+    display: inline-block;
+    padding: .5em;
+    background-color:rgb(233, 233, 233);
+    text-decoration: none;
+    color: #191C26;
+    text-align: center;
+    width: 100%;
+text-align: center;
+border: 1px solid black;
+
+}
+.menuCSS3 a:hover {
+    background-color: whitesmoke;
+}
+.menuCSS3 ul li ul {
+    display: none;
+    
+}
+.menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+    display: inline-block;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .grid{
+        padding-top: 40px;
+    }
+    .grid p{
+        margin: 0 5%;
+        text-align: justify;
+    }
+    
+
+    .menuCSS3{
+        margin-left: auto;
+        margin-right: auto;
+    align-self: center;
+    align-content: center;
+    
+    }
+
+}

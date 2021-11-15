@@ -1,0 +1,40 @@
+
+
+h1,h2{
+		
+    padding-top: 3rem;
+    font-size: 22px;
+line-height: 30px;
+letter-spacing: 1px;
+font-weight: 600;
+color: #011b19;
+border-bottom: 2px solid #01897e6e;
+padding-bottom: 10px;
+background-color: var(--bg);
+text-align: center;
+box-shadow: 1x gray;
+
+}
+p{
+background-color: var(--bg);
+line-height: 30px;
+
+}
+
+.texto{
+	padding:80px 5% 10px 5%;
+    width: 75%;
+    max-width: auto;
+    margin-left: auto;
+	margin-right: auto;
+	font-size: large;
+    text-align: justify;
+	display: grid;
+font-size: 1rem;
+    background-color: whitesmoke;
+}
+
+.texto hr{
+height: 0;
+background:inherit;
+}

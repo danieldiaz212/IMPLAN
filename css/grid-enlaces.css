@@ -1,0 +1,308 @@
+
+.grid{
+    padding-top: 50px;
+	width: 80%;
+    height: auto;
+	align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(1,minmax(200px,1fr));
+display: grid;
+grid-gap: 40px;
+background-color:white;
+}
+
+
+
+.grid #logo{
+    width: 30%;
+    height: auto;
+   margin-left: auto;
+   margin-right: auto;
+
+    
+}
+.grid p{
+    margin: 0 20%;
+    text-align: justify;
+}
+
+h1,h2{
+		
+    padding-top: 3rem;
+    font-size: 22px;
+line-height: 30px;
+letter-spacing: 1px;
+font-weight: 600;
+color: #011b19;
+border-bottom: 2px solid #01897e6e;
+padding-bottom: 10px;
+background-color: var(--bg);
+text-align: center;
+box-shadow: 1x gray;
+
+}
+p{
+background-color: var(--bg);
+line-height: 30px;
+
+}
+
+.texto{
+	padding-top:80px;
+    width: 75%;
+    max-width: auto;
+    margin-left: auto;
+	margin-right: auto;
+	font-size: large;
+    text-align: justify;
+	border-bottom: 2px solid #01897e6e;
+    
+}
+
+.grid3{
+    padding-top: 80px;
+	width: 80%;
+    height: auto;
+	
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: justify;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+display: grid;
+grid-gap: 40px;
+
+background-color:white;
+}
+.grid3 img{
+    width: 85%;
+    height: 95%;
+    box-shadow: 5px 5px 5px gray;
+}
+#ti{
+    color: rgb(247, 162, 4);   
+}
+.grid4 h4{
+    color: rgb(247, 162, 4);   
+}
+.grid3 p{
+    padding: 10%;
+    color: white;
+    background-color: rgb(247, 162, 4);
+    width: 85%;
+    height: 95%;
+    text-align: justify;
+    align-content: center;
+    font-size: 1.5rem;
+    margin: auto;
+    box-shadow: 5px 5px 5px gray;
+}
+
+#tx2 p{
+    background-color: rgb(250, 99, 99);
+}
+#tx3 p{
+    background-color: rgb(107, 179, 247);
+}
+.grid img:hover{
+    transform: none;
+}
+
+.grid4{
+    padding: 5%;
+	width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+display: grid;
+grid-gap: 10px;
+
+background-color:white;
+}
+.grid4 p{
+    margin: 0 10%;
+    text-align: justify;
+}
+.grid4 div{
+    padding: 0 5%;
+    align-items: center;
+    }
+        .grid4 img{
+            width: 85%;
+            height: auto;
+            
+        }
+    @media screen and (max-width: 1300px) {
+    
+        .grid4{
+            padding: auto;
+            width: 80%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            align-content:space-around;
+            text-align: center;
+            overflow:auto;
+            text-decoration: wavy;
+            grid-template-columns: repeat(1,minmax(60px,1fr));
+        display: grid;
+        grid-gap: 10px;
+        
+        background-color:white;
+        }
+    }
+    .lista a
+{
+	text-decoration:none;
+	font-size: medium;
+    margin: auto;
+    padding: 5%;
+
+}
+@media screen and (max-width: 800px) {
+    .grid{
+        padding-top: 40px;
+    }
+    .grid p{
+        margin: 0 8%;
+        text-align: justify;
+    }
+    .grid4{
+        padding: auto;
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        align-content:space-around;
+        text-align: center;
+        overflow:auto;
+        text-decoration: wavy;
+        grid-template-columns: repeat(1,minmax(60px,1fr));
+    display: grid;
+    grid-gap: 10px;
+    
+    background-color:white;
+}
+.lista a
+{
+	text-decoration:none;
+	font-size:x-small;
+    
+    padding: 5%;
+
+}
+}
+
+td{
+    
+    border: 1px solid black;
+}
+.titulosdos
+{
+	
+	background:#fff;
+	text-decoration:none;
+	font-size: medium;
+	padding: auto;
+	margin: 0 auto;
+	width: 100%;
+}
+.tituloscuatro
+{
+	
+	background:#fff;
+	text-decoration:none;
+	font-size: medium;
+    padding: 5%;
+	margin: 0 auto;
+	width: 90%;
+}
+.textosdos
+{
+
+	background:#fff;
+	
+	text-decoration:none;
+	font-size: small;
+    padding: 5%;
+	margin: 0 auto;
+	width:70%;
+	
+}
+.lista
+{
+	
+	list-style:none;
+	
+	
+	height:auto;
+	font-size: x-small;
+	width:100%;
+	margin: auto;
+    padding: 5%;
+	background:#fff;
+	overflow: auto;
+	
+	
+}
+
+
+
+
+
+.lista > ul > li:hover a
+{
+	color:#39F;
+}
+
+.lista > li:hover a
+{
+	color:#39F;
+}
+.lista > ul 
+{	
+			list-style:none;
+			padding:0 5%;
+			background:#fff;
+			
+			
+}
+
+.lista > li
+{
+	display:block;
+	padding:0 5%;
+	text-decoration:none;
+	margin-left:5%;
+}
+.todasCeldas
+{
+    width:100%; 
+   
+}
+.celdauno
+{
+	max-width:180px;
+	
+}
+.celdados
+{
+	max-width:300px;	
+}
+
+.celdatres
+{
+	max-width:500px;	
+}

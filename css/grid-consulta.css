@@ -1,0 +1,116 @@
+
+.grid{
+    padding-top: 50px;
+	width: 80%;
+    height: auto;
+	align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(1,minmax(200px,1fr));
+display: grid;
+grid-gap: 40px;
+background-color:white;
+}
+ .grid iframe{
+    margin-left: auto;
+    margin-right: auto;
+     width: 100%;
+     height: 320px;
+ }
+
+ h4{
+     color: orangered;
+ }
+
+.grid #logo{
+    width: 30%;
+    height: auto;
+   margin-left: auto;
+   margin-right: auto;
+
+    
+}
+.grid p{
+    margin: 0 20%;
+    text-align: justify;
+}
+
+h1,h2{
+		
+    padding-top: 3rem;
+    font-size: 22px;
+line-height: 30px;
+letter-spacing: 1px;
+font-weight: 600;
+color: #011b19;
+border-bottom: 2px solid #01897e6e;
+padding-bottom: 10px;
+background-color: var(--bg);
+text-align: center;
+box-shadow: 1x gray;
+
+}
+
+.grid4{
+    padding: 5%;
+	width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: 1fr;
+display: grid;
+grid-gap: 10px;
+
+background-color:white;
+}
+
+.grid4 div{
+    padding: 0 5%;
+    align-items: center;
+    }
+  
+.pdfview {
+    /* Centrado */
+    margin: auto;
+    display: block;
+    /* Tamaño */
+    width: 80%;
+    height: 100vh;
+    /* Mejorar aspecto */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}     
+    
+@media screen and (max-width: 800px) {
+    .grid{
+        padding-top: 40px;
+    }
+    .grid p{
+        margin: 0 8%;
+        text-align: justify;
+    }
+    
+
+    .pdfview {
+        /* Centrado */
+        margin: auto;
+        display: block;
+        /* Tamaño */
+        width: 80%;
+        height: 50vh;
+        /* Mejorar aspecto */
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }     
+
+
+
+}

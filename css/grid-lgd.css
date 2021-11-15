@@ -1,0 +1,113 @@
+.grid{
+    padding:1% 1%;
+	width: 80%;
+    height: auto;
+	align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: justify;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+display: grid;
+grid-gap: 10px;
+background-color:white;
+}
+
+h4{
+    padding-top: 30px;
+
+}
+h3{
+    font-size: calc(.5em + .5vw);;
+}
+.grid p{
+    margin: 1px 5%;
+text-align: justify;
+font-size: 15px;
+}
+div{
+    width: 95%;
+}
+h1,h2{
+		
+    padding-top: 60px;
+    font-size: calc(1em + 1vw);
+line-height: 30px;
+letter-spacing: 1px;
+font-weight: 600;
+color: #011b19;
+border-bottom: 2px solid #01897e6e;
+padding-bottom: 10px;
+background-color: var(--bg);
+text-align: center;
+box-shadow: 1x gray;
+
+}
+p{
+background-color: var(--bg);
+line-height: 30px;
+
+}
+ 
+
+
+.menuCSS3 ul {
+    display: flex;
+    margin-left: 0%;
+   
+    list-style: none;
+   
+}   
+.menuCSS3 ul li{
+    display: flex;
+    margin-left: 0%;
+   
+    list-style: none;
+   
+}   
+.menuCSS3 a {
+    display: inline-block;
+    padding: .5em;
+    background-color:rgb(233, 233, 233);
+    text-decoration: none;
+    color: #191C26;
+    text-align: justify;
+    width: 100%;
+    list-style: none;
+border: 1px solid black;
+
+}
+.menuCSS3 a:hover {
+    background-color: whitesmoke;
+}
+.menuCSS3 ul li ul {
+    display: none;
+    list-style: none;
+}
+.menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+    display: inline-block;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .grid{
+        padding-top: 40px;
+        width: 95%;
+    }
+    .grid p{
+        margin: 0 5%;
+        text-align: justify;
+    }
+    
+
+    .menuCSS3{
+        margin-left: auto;
+        margin-right: auto;
+    align-self: center;
+    align-content: center;
+    
+    }
+
+}

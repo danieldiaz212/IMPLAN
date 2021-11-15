@@ -1,0 +1,272 @@
+
+.grid{
+    padding-top: 50px;
+	width: 80%;
+    height: auto;
+	align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(1,minmax(200px,1fr));
+display: grid;
+grid-gap: 40px;
+background-color:white;
+}
+
+
+.grid img{
+    width: 100%;
+    height: auto;
+    
+}
+.grid #logo{
+    width: 30%;
+    height: auto;
+   margin-left: auto;
+   margin-right: auto;
+
+    
+}
+.grid p{
+    margin: 0 20%;
+}
+
+h1,h2{
+		
+    padding-top: 3rem;
+    font-size: 22px;
+line-height: 30px;
+letter-spacing: 1px;
+font-weight: 600;
+color: #011b19;
+border-bottom: 2px solid #01897e6e;
+padding-bottom: 10px;
+background-color: var(--bg);
+text-align: center;
+box-shadow: 1x gray;
+
+}
+p{
+background-color: var(--bg);
+line-height: 30px;
+
+}
+.grid p{
+    text-align: center;
+}
+.texto{
+	padding-top:80px;
+    width: 75%;
+    max-width: auto;
+    margin-left: auto;
+	margin-right: auto;
+	font-size: large;
+    text-align: justify;
+	border-bottom: 2px solid #01897e6e;
+    
+}
+
+
+.grid2{
+    padding: 5px;
+	width: 80%;
+    height: auto;
+	
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+display: grid;
+grid-gap: 40px;
+
+background-color:white;
+}
+.grid2 img{
+    width: 90%;
+    height: auto;
+    box-shadow: 5px 5px 5px gray;
+}
+.grid3{
+    padding-top: 80px;
+	width: 80%;
+    height: auto;
+	
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(1,1fr);
+display: grid;
+grid-gap: 10px;
+
+background-color:white;
+}
+.grid3 img{
+    width: 85%;
+    height: 95%;
+    box-shadow: 5px 5px 5px gray;
+}
+#ti{
+    color: rgb(247, 162, 4);   
+}
+.grid4 h4{
+    color: rgb(247, 162, 4);   
+}
+.grid3 p{
+    padding: 5%;
+    color: white;
+    background-color: rgb(247, 162, 4);
+    width: 95%;
+    height: 95%;
+    text-align: justify;
+    align-content: center;
+    font-size: .8rem;
+    margin: auto;
+    box-shadow: 5px 5px 5px gray;
+}
+
+#tx2 p{
+    background-color: rgb(247, 163, 32);
+    }
+#tx3 p{
+    background-color: rgb(246, 164, 4);
+}
+#tx4 p{
+    background-color: rgb(245, 165, 4);
+}
+#tx5 p{
+    background-color: rgb(244, 166, 4);
+}
+#tx6 p{
+    background-color: rgb(243, 167, 4);
+}
+#tx7 p{
+    background-color: rgb(242, 168, 4);
+}
+#tx8 p{
+    background-color: rgb(241, 169, 4);
+}
+#tx9 p{
+    background-color: rgb(240, 170, 4);
+}
+#tx10 p{
+    background-color: rgb(239, 171, 4);
+}
+#tx11 p{
+    background-color: rgb(238, 172, 4);
+}
+#tx12 p{
+    background-color: rgb(237, 173, 4);
+}
+#tx13 p{
+    background-color: rgb(236, 174, 4);
+}
+#tx14 p{
+    background-color: rgb(235, 175, 4);
+}
+#tx15 p{
+    background-color: rgb(234, 176, 4);
+}
+#tx16 p{
+    background-color: rgb(233, 177, 4);
+}
+#tx17 p{
+    background-color: rgb(232, 178, 4);
+}
+#tx18 p{
+    background-color: rgb(231, 179, 4);
+}
+#tx19 p{
+    background-color: rgb(230, 180, 4);
+}
+#tx20 p{
+    background-color: rgb(229, 181, 4);
+}
+#tx21 p{
+    background-color: rgb(228, 182, 4);
+}
+#tx22 p{
+    background-color: rgb(227, 183, 4);
+}
+#tx23 p{
+    background-color: rgb(226, 184, 4);
+}
+#tx24 p{
+    background-color: rgb(225, 185, 4);
+}
+#tx25 p{
+    background-color: rgb(224, 186, 4);
+}
+#tx26 p{
+    background-color: rgb(223, 187, 4);
+}
+.grid img:hover{
+    transform: none;
+}
+.grid2 img:hover{
+    transform:scale(.9);
+}
+.grid4{
+    padding: auto;
+	width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(1,minmax(100px,1fr));
+display: grid;
+grid-gap: 10px;
+
+background-color:white;
+}
+.grid4 p{
+    margin: 0 10%;
+}
+@media screen and (max-width: 800px) {
+    .grid{
+        padding-top: 40px;
+    }
+    .grid p{
+        margin: 0 8%;
+        text-align: justify;
+    }
+    .grid4{
+        padding: auto;
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        align-content:space-around;
+        text-align: center;
+        overflow:auto;
+        text-decoration: wavy;
+        grid-template-columns: repeat(1,minmax(60px,1fr));
+    display: grid;
+    grid-gap: 10px;
+    
+    background-color:white;
+}
+
+.grid4 p {
+margin: 0 10%;
+
+}
+.grid4 img{
+    width: 85%;
+    height: auto;
+    
+}
+
+
+}

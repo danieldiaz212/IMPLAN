@@ -1,0 +1,28 @@
+.grid{
+    
+	width: 80%;
+    height: auto;
+	margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(1,minmax(200px,1fr));
+display: grid;
+grid-gap: 40px;
+
+background-color:white;
+opacity: .85;
+}
+
+
+
+.grid p{
+    margin: 0 20%;
+    text-align: center;
+}
+
+
+

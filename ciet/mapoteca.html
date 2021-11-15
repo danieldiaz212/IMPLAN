@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Mapoteca</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="iso-8859-1">
+	<link rel="icon" href="../css/img/implan.jpg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../css/img/implan.jpg" type="image/x-icon"/>
+    <link rel="stylesheet" href="../css/plantilla.css">
+    <link rel="stylesheet" href="../css/grid-estadistica.css">
+	<script src="http:/code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="../css/animate.css"/>
+        <script src="../js/wow.min.js"></script>
+        <script>
+            new WOW().init(); 
+        </script>
+	<script src="../js/main.js"></script>
+    <script src="../js/cerrar.js"></script>
+    <link rel="stylesheet" href="estilos/listadesplegable.css"/>
+    <link rel="stylesheet" href="estilos/Contenedor.css"/>
+    <link rel="stylesheet" href="fonts/fonts.css"/>
+      <link rel="stylesheet" href="estilos/Estilo_Listas_documentos.css"/>
+<script src="../js/main.js"></script>
+<script src="../js/cerrar.js"></script>
+<script src="javascript/prefix.js" type="text/javascript"></script>
+<script src="javascript/jquery.js" type="text/javascript"></script>
+ <script src="javascript/Main.js" type="text/javascript"></script>
+ <script src="javascript/boton_listas.js" type="text/javascript"></script>
+<script src="javascript/listadesplegable.js" type="text/javascript"></script>
+ <script src="javascript/visualizadorpdfs.js" type="text/javascript"></script>
+</head>
+</head>
+<body>
+    <header class="wow fadeInUp">
+        <class class="container logo-nav-container">
+            <div class="menu_bar">
+            <span ><a href="#" class="bt-menu">Menú</a></span>
+            <a href="../index.html" class="logo"><img src="../css/img/implan.jpg" alt="" title="Buscar"/></a>      
+        </div>
+            <a href="../index.html" class="logo"><img src="../css/img/implan.jpg" alt="" title="Buscar"/></a>
+            <nav>
+                
+                <ul>
+                    <li class="submenu"><a href="../index.html" class="action"><img class="icono" src="../css/img/iconos/implan.png" align="center">IMPLAN</a>
+                        <ul class="children">
+                            <li><a href="../implan/implan.html"><img class="icono" src="../css/img/iconos/implan.png" align="center">IMPLAN</a></li>
+                            <li><a href="../ciet/ciet.html"><img class="icono" src="../css/img/iconos/ciet.png" align="center">CIET</a></li>
+                            <li><a href="../participacion/participacion.html"><img class="icono" src="../css/img/iconos/participacion.png" align="center">PARTICIPACIÓN<br>SOCIAL</a></li>
+                            <li><a href="../patrimonio/patrimonio.html"><img class="icono" src="../css/img/iconos/patrimonio.png" align="center">PATRIMONIO<br>MUNDIAL</a></li>
+                            <li><a href="../transpariencia/transpariencia.html"><img class="icono" src="../css/img/iconos/transpariencia.png" align="center">TRANSPARIENCIA</a></li>
+                            <li><a href="../enterate/enterate.html"><img class="icono" src="../css/img/iconos/enterate.png" align="center">ENTÉRATE</a></li>
+                            <img  src="../css/img/iconos/arriba.png" align="center" class="icono subir">
+                        </ul>
+                        <img  src="../css/img/iconos/abajo.png" align="center" class="icono abajo">
+                    </li>
+                    <li class="submenu"><a href="../ciet/estadistica.html"><img class="icono" src="../css/img/iconos/infoe.png" align="center">INFORMACIÓN ESTADÍSTICA</a>
+                        <ul class="children">
+                            <li><a href="../ciet/index.html" target="_blank"><img class="icono" src="../css/img/iconos/doc.png" align="center">MODELO INFORMÁTICO</a></li>
+                            <li><a href="../ciet/bases.html"><img class="icono" src="../css/img/iconos/data.png" align="center">BASES DE DATOS <br> TERRITORIALES</a></li>
+                            <li><a href="../ciet/enlaces.html"><img class="icono" src="../css/img/iconos/link.png" align="center">ENLACES DE <br> INFORMACIÓN ESTADÍSTICA</a></li>
+                            <img  src="../css/img/iconos/arriba.png" align="center" class="icono subir">
+                        </ul>
+                        <img  src="../css/img/iconos/abajo.png" align="center" class="icono abajo">
+                    </li>
+                    <li class="submenu"><a href="../ciet/infog.html"><img class="icono" src="../css/img/iconos/geo.png" align="center">INFORMACIÓN GEOGRÁFICA</a>
+                        <ul class="children">
+                            <li><a href="../ciet/mapoteca.html"><img class="icono" src="../css/img/iconos/consulta.png" align="center">MAPOTECA</a></li>
+                            <li><a href="../ciet/geografica.html"><img class="icono" src="../css/img/iconos/link.png" align="center">ENLACES DE INFORMACIÓN GEOGRÁFICA PÚBLICA</a></li>
+                            
+                            <img  src="../css/img/iconos/arriba.png" align="center" class="icono subir">
+                        </ul>
+                        <img  src="../css/img/iconos/abajo.png" align="center" class="icono abajo">
+                    </li>
+                    <li class="submenu"><a href="../ciet/documental.html"><img class="icono" src="../css/img/iconos/doc.png" align="center">INFORMACIÓN DOCUMENTAL</a>
+                        <ul class="children">
+                            <li><a href="https:/www.zotero.org/implan/library" target="_blank"><img class="icono" src="../css/img/iconos/texto.png" align="center">ACERVO DOCUMENTAL FÍSICO</a></li>
+                            <li><a href="../ciet/compendio.html"><img class="icono" src="../css/img/iconos/noticia.png" align="center">COMPENDIO DE ESTUDIOS <br> Y PUBLICACIONES</a></li>
+                            <li><a href="../ciet/normateca.html"><img class="icono" src="../css/img/iconos/consulta.png" align="center">NORMATECA DIGITAL</a></li>
+                         
+                            <img  src="../css/img/iconos/arriba.png" align="center" class="icono subir">
+                        </ul>
+                        <img  src="../css/img/iconos/abajo.png" align="center" class="icono abajo">
+                    </li>
+                    <li><a href="" target="_blank"><img src="../css/img/buscar.png" alt="" title="Buscar"/></a></li>
+                </ul>
+                
+            </nav>
+            </class>
+        </div>
+        <hr></hr>
+    </header>
+	<main class="main">
+		<a href="#"><img id="arriba" src="../css/img/up.jpg" alt="" title="Haz click para ir arriba"/></a>
+        <div class="grid wow fadeInDownBig">
+            
+     <h1 id="ti"  class="wow zoomIn">MAPOTECA</h1></div>
+        
+        
+
+         <section class="contenedor">
+ 		
+         
+          <section class="subcontenedor">
+ 			<section class="derechados">
+            	<h2 class="titulos">Zona metropolitana</h2>
+                
+              <section class="lista_documentos">
+                
+    				<ul  id="menu">
+    					  <li id="boton_desarrollo"><span class="tel"> </i></span> Lozalización
+                          
+                    <ul id="boton_desarrollolista">
+                                    
+<li id="boton_hijo" onclick="valores('pdfs/z1.pdf')"> Municipio de Querétaro</li>
+<li id="boton_hijo" onclick="valores('pdfs/z2.pdf')"> Zona Metropolitana de Querétaro</li>
+                                             
+                          </ul>
+                          </li>
+                          
+                          <li id="boton_medioambiente"><span class="tel"> </i></span> Medio Físico (Indicadores)
+                          
+                          <ul id="boton_mediambientelista">
+                       		
+     <li id="boton_hijo" onclick="valores('pdfs/z3.pdf')"> Aguas Residuales Tratadas | 2013 |</li>
+     <li id="boton_hijo" onclick="valores('pdfs/z4.pdf')">Plantas de Tratamiento en Operación | 2013 | </li>
+     <li id="boton_hijo" onclick="valores('pdfs/z5.pdf')">Capacidad de Plantas de Tratamiento en Operación </li>
+     <li id="boton_hijo" onclick="valores('pdfs/z6.pdf')">Plantas de Tratamiento por Problemática | 2013 | </li>
+     <li id="boton_hijo" onclick="valores('pdfs/z7.pdf')">Plantas de Tratamiento por Tipo de Proceso </li>
+     <li id="boton_hijo" onclick="valores('pdfs/z8.pdf')">Incremento de Volumen de Agua Explotada:
+| 2009-2013 | 2012 | 2011 |  2010 | 2009 | </li>                         
+                          </ul>
+                          </li>
+                           <ul id="sub_Ordenadordos">
+                           </ul>
+                          </li>                          
+                          <li id="boton_padretres"><span class="tel"> </i></span> Demografía
+                           <ul id="sub_Ordenadortres">
+     <li id="boton_hijo" onclick="valores('pdfs/z9.pdf')"> Porcentaje de vivienda desocupada por AGEB |2010|</li>
+     <li id="boton_hijo" onclick="valores('pdfs/z10.pdf')">Porcentaje de población de 0 a 14 años |2010|</li>
+     <li id="boton_hijo" onclick="valores('pdfs/z11.pdf')">Porcentaje de población de 15 a 64 años |2010|</li>
+     <li id="boton_hijo" onclick="valores('pdfs/z12.pdf')"> Porcentaje de población de 65 años y más |2010|</li>
+                           
+                           </ul>
+                          </li>
+                          
+                          <li id="boton_padrecuatro"><span class="tel"> </i></span>Socioeconómico
+                           <ul id="sub_Ordenadorcuatro">
+                           
+<li id="boton_hijo" onclick="valores('pdfs/z13.pdf')"> Índice socioeconómico | 2010 |</li>
+
+                           
+                           </ul>
+                          </li> 
+                          <li id="boton_padrecuatro"><span class="tel"> </i></span>Administrativos
+                            <ul id="sub_Ordenadorcuatro">    
+ <li id="boton_hijo" onclick="valores('pdfs/z14.pdf')">Municipio de Corregidora </li>
+ <li id="boton_hijo" onclick="valores('pdfs/z15.pdf')">Municipio de El Marqués </li>
+ <li id="boton_hijo" onclick="valores('pdfs/z16.pdf')">Municipio de Huimilpan </li>
+ <li id="boton_hijo" onclick="valores('pdfs/z17.pdf')">Municipio de Querétaro </li>
+ <li id="boton_hijo" onclick="valores('pdfs/z18.pdf')">Zona Metropolitana de Querétaro </li>
+ <li id="boton_hijo" onclick="valores('pdfs/z19.pdf')">Municipio de Colón </li>
+ <li id="boton_hijo" onclick="valores('pdfs/z20.pdf')">Megalópolis </li>
+
+                            </ul>
+                           </li>   
+   					 </ul>
+</section>  
+
+<h2 class="titulos">Delegaciones</h2>
+                
+<section class="lista_documentos">
+            
+                
+    <ul  id="menudos">
+        <li id="boton_segundo"><span class="tel"> </i></span> Centro Histórico
+           <ul id="sub_Segundo">
+
+    					  <li id="boton_desarrollo"><span class="tel"> </i></span> Lozalización
+                          
+                    <ul id="boton_desarrollolista">
+                                    
+<li id="boton_hijo" onclick="valores('pdfs/d1.pdf')"> Delimitación</li>
+                                             
+                          </ul>
+                          </li>
+                          
+                          <li id="boton_medioambiente"><span class="tel"> </i></span> Medio Físico
+                          
+                          <ul id="boton_mediambientelista">
+                       		
+     <li id="boton_hijo" onclick="valores('pdfs/d2.pdf')">Relieve </li>
+     <li id="boton_hijo" onclick="valores('pdfs/d3.pdf')"> Clima</li>
+     <li id="boton_hijo" onclick="valores('pdfs/d4.pdf')">Hidrografía </li>
+                          </ul>
+                          </li>
+                           
+                          <ul id="sub_Ordenadordos">
+                           </ul>
+                          </li>                          
+                          <li id="boton_padretres"><span class="tel"> </i></span> Demografía
+                           <ul id="sub_Ordenadortres">
+     <li id="boton_hijo" onclick="valores('pdfs/d5.pdf')"> Tasa de crecimiento medio anual</li>
+     <li id="boton_hijo" onclick="valores('pdfs/d6.pdf')"> Densidad |2010|</li>
+
+     <li id="boton_hijo" onclick="valores('pdfs/d7.pdf')"> Porcentaje de vivienda desocupada por AGEB |2010|</li>
+     <li id="boton_hijo" onclick="valores('pdfs/d8.pdf')">Porcentaje de población de 0 a 14 años |2010|</li>
+     <li id="boton_hijo" onclick="valores('pdfs/d9.pdf')">Porcentaje de población de 15 a 64 años |2010|</li>
+     <li id="boton_hijo" onclick="valores('pdfs/d10.pdf')"> Porcentaje de población de 65 años y más |2010|</li>
+                           
+                           </ul>
+                          </li>
+                          
+                          <li id="boton_padrecuatro"><span class="tel"> </i></span>Socioeconómico
+                           <ul id="sub_Ordenadorcuatro">
+                           
+<li id="boton_hijo" onclick="valores('pdfs/d11.pdf')"> Grado de marginación | 2010 |</li>
+<li id="boton_hijo" onclick="valores('pdfs/d12.pdf')"> Índice socioeconómico | 2010 |</li>
+<li id="boton_hijo" onclick="valores('pdfs/d13.pdf')"> Restaurantes</li>
+<li id="boton_hijo" onclick="valores('pdfs/d14.pdf')">Espacio Público </li>
+<li id="boton_hijo" onclick="valores('pdfs/d15.pdf')">Hoteles </li>
+<li id="boton_hijo" onclick="valores('pdfs/d16.pdf')"> Tiendas de Autoservicio</li>
+<li id="boton_hijo" onclick="valores('pdfs/d17.pdf')">Estaciones de Servicio (Gasolineras) </li>
+<li id="boton_hijo" onclick="valores('pdfs/d18.pdf')">Taquerías </li>
+                           
+                           </ul>
+                          </li> 
+                          <li id="boton_padrecuatro"><span class="tel"> </i></span>Administrativos
+                            <ul id="sub_Ordenadorcuatro">    
+ <li id="boton_hijo" onclick="valores('pdfs/d19.pdf')">Delimitación </li>
+ <li id="boton_hijo" onclick="valores('pdfs/d20.pdf')">Escuelas por nivel educativo </li>
+ <li id="boton_hijo" onclick="valores('pdfs/d21.pdf')"> Equipamiento de salud pública</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d22.pdf')"> Espacios públicos</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d22.pdf')"> Localización</li>
+
+                            </ul>
+                           </li>   
+   					                 
+           </ul>
+           
+           <li id="boton_tercero"><span class="tel"> </i></span> Epigmenio González
+           <ul id="sub_tercero">
+            <li id="boton_desarrollo"><span class="tel"> </i></span> Lozalización
+                          
+                <ul id="boton_desarrollolista">
+                                
+<li id="boton_hijo" onclick="valores('pdfs/d1.pdf')"> Delimitación</li>
+                                         
+                      </ul>
+                      </li>
+                      
+                      <li id="boton_medioambiente"><span class="tel"> </i></span> Medio Físico
+                      
+                      <ul id="boton_mediambientelista">
+                           
+ <li id="boton_hijo" onclick="valores('pdfs/d2.pdf')">Relieve </li>
+ <li id="boton_hijo" onclick="valores('pdfs/d3.pdf')"> Clima</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d4.pdf')">Hidrografía </li>
+                      </ul>
+                      </li>
+                       
+                      <ul id="sub_Ordenadordos">
+                       </ul>
+                      </li>                          
+                      <li id="boton_padretres"><span class="tel"> </i></span> Demografía
+                       <ul id="sub_Ordenadortres">
+ <li id="boton_hijo" onclick="valores('pdfs/d5.pdf')"> Tasa de crecimiento medio anual</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d6.pdf')"> Densidad |2010|</li>
+
+ <li id="boton_hijo" onclick="valores('pdfs/d7.pdf')"> Porcentaje de vivienda desocupada por AGEB |2010|</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d8.pdf')">Porcentaje de población de 0 a 14 años |2010|</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d9.pdf')">Porcentaje de población de 15 a 64 años |2010|</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d10.pdf')"> Porcentaje de población de 65 años y más |2010|</li>
+                       
+                       </ul>
+                      </li>
+                      
+                      <li id="boton_padrecuatro"><span class="tel"> </i></span>Socioeconómico
+                       <ul id="sub_Ordenadorcuatro">
+                       
+<li id="boton_hijo" onclick="valores('pdfs/d11.pdf')"> Grado de marginación | 2010 |</li>
+<li id="boton_hijo" onclick="valores('pdfs/d12.pdf')"> Índice socioeconómico | 2010 |</li>
+<li id="boton_hijo" onclick="valores('pdfs/d13.pdf')"> Restaurantes</li>
+<li id="boton_hijo" onclick="valores('pdfs/d14.pdf')">Espacio Público </li>
+<li id="boton_hijo" onclick="valores('pdfs/d15.pdf')">Hoteles </li>
+<li id="boton_hijo" onclick="valores('pdfs/d16.pdf')"> Tiendas de Autoservicio</li>
+<li id="boton_hijo" onclick="valores('pdfs/d17.pdf')">Estaciones de Servicio (Gasolineras) </li>
+<li id="boton_hijo" onclick="valores('pdfs/d18.pdf')">Taquerías </li>
+                       
+                       </ul>
+                      </li> 
+                      <li id="boton_padrecuatro"><span class="tel"> </i></span>Administrativos
+                        <ul id="sub_Ordenadorcuatro">    
+<li id="boton_hijo" onclick="valores('pdfs/d19.pdf')">Delimitación </li>
+<li id="boton_hijo" onclick="valores('pdfs/d20.pdf')">Escuelas por nivel educativo </li>
+<li id="boton_hijo" onclick="valores('pdfs/d21.pdf')"> Equipamiento de salud pública</li>
+<li id="boton_hijo" onclick="valores('pdfs/d22.pdf')"> Espacios públicos</li>
+<li id="boton_hijo" onclick="valores('pdfs/d22.pdf')"> Localización</li>
+
+                        </ul>
+                       </li>   
+           </ul>
+           
+           <li id="boton_cuarto"><span class="tel"> </i></span> Felipe Carrillo Puerto
+           <ul id="sub_cuarto">
+            <li id="boton_desarrollo"><span class="tel"> </i></span> Lozalización
+                          
+                <ul id="boton_desarrollolista">
+                                
+<li id="boton_hijo" onclick="valores('pdfs/d1.pdf')"> Delimitación</li>
+                                         
+                      </ul>
+                      </li>
+                      
+                      <li id="boton_medioambiente"><span class="tel"> </i></span> Medio Físico
+                      
+                      <ul id="boton_mediambientelista">
+                           
+ <li id="boton_hijo" onclick="valores('pdfs/d2.pdf')">Relieve </li>
+ <li id="boton_hijo" onclick="valores('pdfs/d3.pdf')"> Clima</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d4.pdf')">Hidrografía </li>
+                      </ul>
+                      </li>
+                       
+                      <ul id="sub_Ordenadordos">
+                       </ul>
+                      </li>                          
+                      <li id="boton_padretres"><span class="tel"> </i></span> Demografía
+                       <ul id="sub_Ordenadortres">
+ <li id="boton_hijo" onclick="valores('pdfs/d5.pdf')"> Tasa de crecimiento medio anual</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d6.pdf')"> Densidad |2010|</li>
+
+ <li id="boton_hijo" onclick="valores('pdfs/d7.pdf')"> Porcentaje de vivienda desocupada por AGEB |2010|</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d8.pdf')">Porcentaje de población de 0 a 14 años |2010|</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d9.pdf')">Porcentaje de población de 15 a 64 años |2010|</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d10.pdf')"> Porcentaje de población de 65 años y más |2010|</li>
+                       
+                       </ul>
+                      </li>
+                      
+                      <li id="boton_padrecuatro"><span class="tel"> </i></span>Socioeconómico
+                       <ul id="sub_Ordenadorcuatro">
+                       
+<li id="boton_hijo" onclick="valores('pdfs/d11.pdf')"> Grado de marginación | 2010 |</li>
+<li id="boton_hijo" onclick="valores('pdfs/d12.pdf')"> Índice socioeconómico | 2010 |</li>
+<li id="boton_hijo" onclick="valores('pdfs/d13.pdf')"> Restaurantes</li>
+<li id="boton_hijo" onclick="valores('pdfs/d14.pdf')">Espacio Público </li>
+<li id="boton_hijo" onclick="valores('pdfs/d15.pdf')">Hoteles </li>
+<li id="boton_hijo" onclick="valores('pdfs/d16.pdf')"> Tiendas de Autoservicio</li>
+<li id="boton_hijo" onclick="valores('pdfs/d17.pdf')">Estaciones de Servicio (Gasolineras) </li>
+<li id="boton_hijo" onclick="valores('pdfs/d18.pdf')">Taquerías </li>
+                       
+                       </ul>
+                      </li> 
+                      <li id="boton_padrecuatro"><span class="tel"> </i></span>Administrativos
+                        <ul id="sub_Ordenadorcuatro">    
+<li id="boton_hijo" onclick="valores('pdfs/d19.pdf')">Delimitación </li>
+<li id="boton_hijo" onclick="valores('pdfs/d20.pdf')">Escuelas por nivel educativo </li>
+<li id="boton_hijo" onclick="valores('pdfs/d21.pdf')"> Equipamiento de salud pública</li>
+<li id="boton_hijo" onclick="valores('pdfs/d22.pdf')"> Espacios públicos</li>
+<li id="boton_hijo" onclick="valores('pdfs/d22.pdf')"> Localización</li>
+
+                        </ul>
+                       </li>   
+           </ul>
+           
+           <li id="boton_quinto"><span class="tel"> </i></span> Félix Osores Sotomayor
+           <ul id="sub_quinto">
+            <li id="boton_desarrollo"><span class="tel"> </i></span> Lozalización
+                          
+                <ul id="boton_desarrollolista">
+                                
+<li id="boton_hijo" onclick="valores('pdfs/d1.pdf')"> Delimitación</li>
+                                         
+                      </ul>
+                      </li>
+                      
+                      <li id="boton_medioambiente"><span class="tel"> </i></span> Medio Físico
+                      
+                      <ul id="boton_mediambientelista">
+                           
+ <li id="boton_hijo" onclick="valores('pdfs/d2.pdf')">Relieve </li>
+ <li id="boton_hijo" onclick="valores('pdfs/d3.pdf')"> Clima</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d4.pdf')">Hidrografía </li>
+                      </ul>
+                      </li>
+                       
+                      <ul id="sub_Ordenadordos">
+                       </ul>
+                      </li>                          
+                      <li id="boton_padretres"><span class="tel"> </i></span> Demografía
+                       <ul id="sub_Ordenadortres">
+ <li id="boton_hijo" onclick="valores('pdfs/d5.pdf')"> Tasa de crecimiento medio anual</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d6.pdf')"> Densidad |2010|</li>
+
+ <li id="boton_hijo" onclick="valores('pdfs/d7.pdf')"> Porcentaje de vivienda desocupada por AGEB |2010|</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d8.pdf')">Porcentaje de población de 0 a 14 años |2010|</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d9.pdf')">Porcentaje de población de 15 a 64 años |2010|</li>
+ <li id="boton_hijo" onclick="valores('pdfs/d10.pdf')"> Porcentaje de población de 65 años y más |2010|</li>
+                       
+                       </ul>
+                      </li>
+                      
+                      <li id="boton_padrecuatro"><span class="tel"> </i></span>Socioeconómico
+                       <ul id="sub_Ordenadorcuatro">
+                       
+<li id="boton_hijo" onclick="valores('pdfs/d11.pdf')"> Grado de marginación | 2010 |</li>
+<li id="boton_hijo" onclick="valores('pdfs/d12.pdf')"> Índice socioeconómico | 2010 |</li>
+<li id="boton_hijo" onclick="valores('pdfs/d13.pdf')"> Restaurantes</li>
+<li id="boton_hijo" onclick="valores('pdfs/d14.pdf')">Espacio Público </li>
+<li id="boton_hijo" onclick="valores('pdfs/d15.pdf')">Hoteles </li>
+<li id="boton_hijo" onclick="valores('pdfs/d16.pdf')"> Tiendas de Autoservicio</li>
+<li id="boton_hijo" onclick="valores('pdfs/d17.pdf')">Estaciones de Servicio (Gasolineras) </li>
+<li id="boton_hijo" onclick="valores('pdfs/d18.pdf')">Taquerías </li>
+                       
+                       </ul>
+                      </li> 
+                      <li id="boton_padrecuatro"><span class="tel"> </i></span>Administrativos
+                        <ul id="sub_Ordenadorcuatro">    
+<li id="boton_hijo" onclick="valores('pdfs/d19.pdf')">Delimitación </li>
+<li id="boton_hijo" onclick="valores('pdfs/d20.pdf')">Escuelas por nivel educativo </li>
+<li id="boton_hijo" onclick="valores('pdfs/d21.pdf')"> Equipamiento de salud pública</li>
+<li id="boton_hijo" onclick="valores('pdfs/d22.pdf')"> Espacios públicos</li>
+<li id="boton_hijo" onclick="valores('pdfs/d22.pdf')"> Localización</li>
+
+                        </ul>
+                       </li>   
+           </ul>
+
+            <li id="boton_tercero"><span class="tel"> </i></span> Josefa Vergara y Hernández
+           <ul id="sub_tercero">
+   
+           </ul>
+           
+           <li id="boton_cuarto"><span class="tel"> </i></span> Santa Rosa Jauregui
+           <ul id="sub_cuarto">
+
+           </ul>
+           
+           <li id="boton_quinto"><span class="tel"> </i></span> Villa Cayetano
+           <ul id="sub_quinto">
+           </ul>
+           
+           
+           
+    </ul>
+</section>
+
+<h2 class="titulos">Municipio de Querétaro</h2>
+                
+			
+             <section class="lista_documentos">
+                
+                <ul  id="menu">
+                      <li id="boton_desarrollo"><span class="tel"> </i></span> Lozalización
+                      
+                <ul id="boton_desarrollolista">
+                                
+<li id="boton_hijo" onclick="valores('pdfs/m1.pdf')"> Municipio de Querétaro</li>
+                                          
+                      </ul>
+                      </li>
+                      
+                      <li id="boton_medioambiente"><span class="tel"> </i></span> Medio Físico (Indicadores)
+                      
+                      <ul id="boton_mediambientelista">
+                           
+ <li id="boton_hijo" onclick="valores('pdfs/m2.pdf')">Clima </li>
+ <li id="boton_hijo" onclick="valores('pdfs/m3.pdf')">Relieve </li>
+ <li id="boton_hijo" onclick="valores('pdfs/m4.pdf')">Hidrografía </li>
+ <li id="boton_hijo" onclick="valores('pdfs/m5.pdf')">Urbano </li>
+                      
+                      </ul>
+                      </li>
+                       <ul id="sub_Ordenadordos">
+                       </ul>
+                      </li>                          
+                      <li id="boton_padretres"><span class="tel"> </i></span> Demografía
+                       <ul id="sub_Ordenadortres">
+ <li id="boton_hijo" onclick="valores('pdfs/m6.pdf')">Declinación y Deterioro:
+    | 2000-2010 | 2000-2005 | 2005-2010 | </li>
+ <li id="boton_hijo" onclick="valores('pdfs/.pdf')">Densidad de Población por Hectárea:
+    | 2010 | 2005 | 2000 | </li>
+ <li id="boton_hijo" onclick="valores('pdfs/m7.pdf')"> Población Desocupada: | 2010 |</li>
+ <li id="boton_hijo" onclick="valores('pdfs/m8.pdf')">Crecimiento Histórico </li>
+ <li id="boton_hijo" onclick="valores('pdfs/m9.pdf')">Porcentaje de vivienda desocupada por AGEB |2010| </li>
+ <li id="boton_hijo" onclick="valores('pdfs/m10.pdf')">Porcentaje de Población de 0 a 14 aAños |2010| </li>
+ <li id="boton_hijo" onclick="valores('pdfs/m11.pdf')">Porcentaje de Población de 15 a 64 años |2010| </li>
+ <li id="boton_hijo" onclick="valores('pdfs/m12.pdf')">Porcentaje de Población de 65 años y más |2010| </li>
+                
+                       </ul>
+                      </li>
+                      
+                      <li id="boton_padrecuatro"><span class="tel"> </i></span>Socioeconómico
+                       <ul id="sub_Ordenadorcuatro">
+                       
+<li id="boton_hijo" onclick="valores('pdfs/m13.pdf')"> Restaurantes</li>
+<li id="boton_hijo" onclick="valores('pdfs/m14.pdf')">Espacio Público </li>
+<li id="boton_hijo" onclick="valores('pdfs/m15.pdf')">Hoteles </li>
+<li id="boton_hijo" onclick="valores('pdfs/m16.pdf')">Porcentaje de Vivienda Desocupada </li>
+<li id="boton_hijo" onclick="valores('pdfs/m17.pdf')"> Tiendas de Autoservicio</li>
+<li id="boton_hijo" onclick="valores('pdfs/m18.pdf')">Estaciones de Servicio (Gasolineras) </li>
+<li id="boton_hijo" onclick="valores('pdfs/m19.pdf')">Taquerías </li>
+<li id="boton_hijo" onclick="valores('pdfs/m20.pdf')">Grado de Marginación por Manzanas:
+| 2010 | 2005 | 2000 | </li>
+<li id="boton_hijo" onclick="valores('pdfs/m21.pdf')">Índice Socioeconómico: | 2010 | </li>
+
+                       
+                       </ul>
+                      </li> 
+                      <li id="boton_padrecuatro"><span class="tel"> </i></span>Movilidad
+                        <ul id="sub_Ordenadorcuatro">    
+<li id="boton_hijo" onclick="valores('pdfs/m22.pdf')"> Cruceros con Mayor Índice de Hechos de Tránsito y Atropellamientos:
+| 2015 | 2014 | 2013 |</li>
+
+                        
+                        </ul>
+                       </li>   
+                    </ul>
+</section>  
+ </section>            
+            <section class="izquierdados">
+            	<h2 class="titulos">Visualización</h2>
+                	<p class="textos">Selecciona un estudio.</p>
+            			
+							
+					    
+					<section  class="fondo_pdf" >
+                     
+                       <section class="bloqueblanco">
+            			
+                        <ul class="descargas">
+                        
+                        	<li><a  target="_blank" id="otraventana" href="about:blank" >Visualizar en otra ventana</a></li>
+                     
+					   
+                        	<li><a  id="descarga" href="about:blank" download="documento.pdf"> Descarga archivo</a> </li>
+                         </ul>
+                     
+                        </section>
+                    
+    					<iframe   class="tamano_pdf" id="calendar" src="about:blank" width="100%" height="30%" align="center" frameborder="0" scrolling="no"></iframe>
+					</section>
+
+			
+            
+              
+                
+            </section>
+          
+        </section>
+     
+ </section>
+        
+      
+
+
+    </main>
+    <hr></hr><footer class="footer">
+<div >
+    <footer id="contacto" class="wow fadeInDownBig animated" >
+        <h4>
+			<p>INSTITUTO MUNICIPAL DE PLANEACIÓN URBANA</p>
+			<p>Vicente Guerrero 16 Sur</p>
+			<p>Histórico, 76000</p>
+			<p>Santiago de Querétaro, Querétaro</p>
+			<p>México</p>
+            <p>Teléfono: +52 (442) 212-1846 / 214-0641 / 214-4713</p>
+        </h4>
+        <div>
+            <a href="http:/facebook.com" target="_blank"><img src="../css/img/facebook.jpg" alt="" title="Facebook"/></a>
+            <a href="http:/twitter.com" target="_blank"><img src="../css/img/twitter.jpg" alt="" title="Twitter"/></a>
+            <a href="http:/youtube.com" target="_blank"><img src="../css/img/youtube.jpg" alt="" title="Youtube"/></a>
+            <a href="https:/goo.gl/maps/m7HgL4r7fmTDGWX3A" target="_blank"><img src="../css/img/mapa1.png" alt="" title="Ubicacion"/></a>
+        </div>
+    </footer>
+</div>
+<script src="https:/code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../js/script.js "></script>
+
+    </footer>
+</body>
+    </body>

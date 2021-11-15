@@ -1,0 +1,86 @@
+.grid{
+    padding: 20px	;
+	width: 80%;
+    height: auto;
+	margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+	align-content:space-around;
+	text-align: center;
+    overflow:auto;
+	text-decoration: wavy;
+	grid-template-columns: repeat(1,minmax(200px,1fr));
+display: grid;
+grid-gap: 40px;
+
+background-color:white;
+opacity: .85;
+}
+
+.grid img{
+    width: 90%;
+    height: auto;
+    
+    
+}
+#pie{
+    text-align: center;
+}
+#foto{
+    text-align: right;
+}
+.grid p{
+    margin: 0 20%;
+    text-align: justify;
+}
+
+h1,h2{
+		
+    padding-top: 3rem;
+    font-size: 3vw;
+line-height: 30px;
+letter-spacing: 1px;
+font-weight: 600;
+color: #011b19;
+border-bottom: 2px solid #01897e6e;
+padding-bottom: 10px;
+background-color: var(--bg);
+text-align: center;
+box-shadow: 1x gray;
+
+}
+p{
+background-color: var(--bg);
+line-height: 30px;
+
+}
+.grid p{
+    text-align: justify;
+}
+.texto{
+	padding-top:80px;
+    width: 75%;
+    max-width: auto;
+    margin-left: auto;
+	margin-right: auto;
+	font-size: large;
+    text-align: justify;
+	border-bottom: 2px solid #01897e6e;
+}
+@media screen and (max-width: 500px) {
+    .grid img{
+        width: 220px;
+        height: auto;
+        
+    }
+    .grid p{
+        margin: 0 5%;
+        text-align: justify;
+    }
+
+}
+
+.texto hr{
+height: auto;
+background: whitesmoke;
+}
